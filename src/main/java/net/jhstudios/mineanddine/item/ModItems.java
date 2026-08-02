@@ -86,6 +86,8 @@ public class ModItems {
             .food(ModFoodComponents.RICE_BOWL)
             .maxCount(1)));
 
+    public static final Item ONION_SEEDS = registerItem("onion_seeds", new AliasedBlockItem(ModBlocks.ONION_CROP, new Item.Settings()));
+
     public static final Item ROCK = registerItem("rock", new RockItem(new Item.Settings()));
 
     public static final Item SALT = registerItem("salt", new Item(new Item.Settings()));

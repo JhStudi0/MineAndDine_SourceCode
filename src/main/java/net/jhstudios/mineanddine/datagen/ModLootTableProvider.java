@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.block.custom.*;
+import net.jhstudios.mineanddine.block.custom.CropBlocks.*;
 import net.jhstudios.mineanddine.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -12,12 +13,10 @@ import net.minecraft.item.Item;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
-import net.minecraft.loot.condition.InvertedLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
@@ -40,23 +39,25 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .exactMatch(CornCropBlock.AGE, 8));
         addDrop(ModBlocks.CORN_CROP, cropDrops(ModBlocks.CORN_CROP, ModItems.CORN, ModItems.CORN_SEEDS, builder));
 
-        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.TOMATO_CROP)
+        BlockStatePropertyLootCondition.Builder builder1 = BlockStatePropertyLootCondition.builder(ModBlocks.TOMATO_CROP)
                 .properties(StatePredicate.Builder.create()
                 .exactMatch(TomatoCropBlock.AGE, TomatoCropBlock.MAX_AGE));
-        this.addDrop(ModBlocks.TOMATO_CROP, this.cropDrops(ModBlocks.TOMATO_CROP, ModItems.TOMATO, ModItems.TOMATO_SEEDS, builder2));
+        this.addDrop(ModBlocks.TOMATO_CROP, this.cropDrops(ModBlocks.TOMATO_CROP, ModItems.TOMATO, ModItems.TOMATO_SEEDS, builder1));
 
-        BlockStatePropertyLootCondition.Builder builder3 = BlockStatePropertyLootCondition.builder(ModBlocks.VANILLA_BEAN_CROP).properties(StatePredicate.Builder.create()
+        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.VANILLA_BEAN_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(VanillaBeanCropBlock.AGE, 8));
-        addDrop(ModBlocks.VANILLA_BEAN_CROP, cropDrops(ModBlocks.VANILLA_BEAN_CROP, ModItems.VANILLA_BEAN, ModItems.VANILLA_SEEDS, builder3));
+        addDrop(ModBlocks.VANILLA_BEAN_CROP, cropDrops(ModBlocks.VANILLA_BEAN_CROP, ModItems.VANILLA_BEAN, ModItems.VANILLA_SEEDS, builder2));
 
-        BlockStatePropertyLootCondition.Builder builder4 = BlockStatePropertyLootCondition.builder(ModBlocks.RICE_CROP).properties(StatePredicate.Builder.create()
+        BlockStatePropertyLootCondition.Builder builder3 = BlockStatePropertyLootCondition.builder(ModBlocks.RICE_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(RiceCropBlock.AGE, 8));
-        addDrop(ModBlocks.RICE_CROP, cropDrops(ModBlocks.RICE_CROP, ModItems.RICE_SEEDS, ModItems.RICE_SEEDS, builder4));
+        addDrop(ModBlocks.RICE_CROP, cropDrops(ModBlocks.RICE_CROP, ModItems.RICE_SEEDS, ModItems.RICE_SEEDS, builder3));
+
+        BlockStatePropertyLootCondition.Builder builder4 = BlockStatePropertyLootCondition.builder(ModBlocks.ONION_CROP).properties(StatePredicate.Builder.create()
+                .exactMatch(OnionCropBlock.AGE, OnionCropBlock.MAX_AGE));
+        this.addDrop(ModBlocks.ONION_CROP, this.cropDrops(ModBlocks.ONION_CROP, ModItems.ONION, ModItems.ONION_SEEDS, builder4));
+
 
         this.addDrop(ModBlocks.YEAST_JAR, LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(ModItems.YEAST_JAR))));
-
-
-
         BlockStatePropertyLootCondition.Builder fermented = BlockStatePropertyLootCondition.builder(ModBlocks.YEAST_JAR).properties(StatePredicate.Builder.create()
                 .exactMatch(YeastJarBlock.AGE, YeastJarBlock.MAX_AGE));
 

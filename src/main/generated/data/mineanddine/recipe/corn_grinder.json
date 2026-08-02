@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:grindstone"
+    },
+    "S": {
+      "item": "minecraft:stone_bricks"
+    }
+  },
+  "pattern": [
+    "SGS",
+    "SGS",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:corn_grinder"
+  }
+}

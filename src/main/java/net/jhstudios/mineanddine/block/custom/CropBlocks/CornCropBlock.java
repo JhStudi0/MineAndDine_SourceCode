@@ -1,4 +1,4 @@
-package net.jhstudios.mineanddine.block.custom;
+package net.jhstudios.mineanddine.block.custom.CropBlocks;
 
 import net.jhstudios.mineanddine.item.ModItems;
 import net.minecraft.block.*;
@@ -13,7 +13,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class VanillaBeanCropBlock extends CropBlock {
+public class CornCropBlock extends CropBlock {
 
     public static final int FIRST_STAGE_MAX_AGE = 7;
     public static final int SECOND_STAGE_MAX_AGE = 1;
@@ -32,7 +32,7 @@ public class VanillaBeanCropBlock extends CropBlock {
     public static final IntProperty AGE = IntProperty.of("age", 0, 8);
 
 
-    public VanillaBeanCropBlock(Settings settings) {
+    public CornCropBlock(Settings settings) {
         super(settings);
     }
 
@@ -85,7 +85,7 @@ public class VanillaBeanCropBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return ModItems.VANILLA_SEEDS;
+        return ModItems.CORN_SEEDS;
     }
 
     @Override

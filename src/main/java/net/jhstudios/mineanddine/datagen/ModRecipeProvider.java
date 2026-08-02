@@ -2,12 +2,17 @@ package net.jhstudios.mineanddine.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.CookingPotRecipeJsonBuilder;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.CornGrinderRecipeJsonBuilder;
 import net.jhstudios.mineanddine.item.ModItems;
+import net.jhstudios.mineanddine.util.ModTags;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -146,6 +151,42 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', ItemTags.PLANKS)
                 .input('G', Items.GLASS)
                 .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CORN_GRINDER)
+                .pattern("SGS")
+                .pattern("SGS")
+                .pattern("   ")
+                .input('S', Blocks.STONE_BRICKS)
+                .input('G', Blocks.GRINDSTONE)
+                .criterion(hasItem(Items.GRINDSTONE), conditionsFromItem(Items.GRINDSTONE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PLATE, 3)
+                .pattern("BBB")
+                .pattern(" W ")
+                .pattern("   ")
+                .input('B', Items.BRICK)
+                .input('W', Items.WHITE_DYE)
+                .criterion(hasItem(Items.BRICK), conditionsFromItem(Items.BRICK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.COOKING_POT)
+                .pattern("   ")
+                .pattern("C C")
+                .pattern("CCC")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.STOVE)
+                .pattern("DDD")
+                .pattern("BCB")
+                .pattern("BBB")
+                .input('B', Blocks.BRICKS)
+                .input('C', Blocks.COAL_BLOCK)
+                .input('D', Blocks.POLISHED_DEEPSLATE_SLAB)
+                .criterion(hasItem(Blocks.BRICKS), conditionsFromItem(Blocks.BRICKS))
                 .offerTo(exporter);
 
 

@@ -1,4 +1,4 @@
-package net.jhstudios.mineanddine.block.custom;
+package net.jhstudios.mineanddine.block.custom.CropBlocks;
 
 import net.jhstudios.mineanddine.item.ModItems;
 import net.minecraft.block.Block;
@@ -8,21 +8,20 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 
-public class TomatoCropBlock extends CropBlock {
+public class OnionCropBlock extends CropBlock {
     public static final int MAX_AGE = 6;
     public static final IntProperty AGE = IntProperty.of("age", 0, 6);
-
-    public TomatoCropBlock(Settings settings) {
+    public OnionCropBlock(Settings settings) {
         super(settings);
     }
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return ModItems.TOMATO_SEEDS;
+        return ModItems.ONION_SEEDS;
     }
 
     @Override
-    public IntProperty getAgeProperty() {
+    protected IntProperty getAgeProperty() {
         return AGE;
     }
 

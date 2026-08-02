@@ -29,6 +29,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.POPPY_SEEDS);
 
+                        entries.add(ModItems.ONION_SEEDS);
+
                     }).build());
 
     public static final ItemGroup Mine_And_Dine_Ingredients = Registry.register(Registries.ITEM_GROUP,

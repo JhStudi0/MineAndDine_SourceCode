@@ -1,9 +1,9 @@
 package net.jhstudios.mineanddine.block;
 
-import com.sun.jna.platform.unix.solaris.Kstat2StatusException;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jhstudios.mineanddine.MineAndDine;
 import net.jhstudios.mineanddine.block.custom.*;
+import net.jhstudios.mineanddine.block.custom.CropBlocks.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.CakeBlock;
@@ -44,7 +44,7 @@ public class ModBlocks {
                     .breakInstantly()
                     .sounds(BlockSoundGroup.CROP)
                     .pistonBehavior(PistonBehavior.DESTROY)
-                    .mapColor(MapColor.BROWN)));
+                    .mapColor(MapColor.TERRACOTTA_BLACK)));
 
     public static final Block RICE_CROP = registerBlockWithoutBlockItem("rice_crop",
             new RiceCropBlock(AbstractBlock.Settings.create()
@@ -53,7 +53,16 @@ public class ModBlocks {
                     .breakInstantly()
                     .sounds(BlockSoundGroup.CROP)
                     .pistonBehavior(PistonBehavior.DESTROY)
-                    .mapColor(MapColor.GREEN)));
+                    .mapColor(MapColor.TERRACOTTA_YELLOW)));
+
+    public static final Block ONION_CROP = registerBlockWithoutBlockItem("onion_crop",
+            new OnionCropBlock(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .mapColor(MapColor.BROWN)));
 
 
     public static final Block YEAST_JAR = registerBlockWithoutBlockItem("yeast_jar",
@@ -71,31 +80,34 @@ public class ModBlocks {
                     .strength(0.5f)
                     .sounds(BlockSoundGroup.WOOL)
                     .mapColor(MapColor.BROWN)
-                    .nonOpaque()
-            ));
+                    .nonOpaque()));
 
     public static final Block COOKING_POT = registerBlock("cooking_pot",
             new CookingPotBlock(AbstractBlock.Settings.create()
                     .strength(2.5f)
                     .sounds(BlockSoundGroup.COPPER)
+                    .mapColor(MapColor.STONE_GRAY)
                     .nonOpaque()));
 
     public static final Block PLATE = registerBlockWithoutBlockItem("plate",
             new PlateBlock(AbstractBlock.Settings.create()
                     .strength(1.25f)
                     .sounds(BlockSoundGroup.DECORATED_POT_SHATTER)
+                    .mapColor(MapColor.WHITE)
                     .nonOpaque()));
 
     public static final Block CORN_GRINDER = registerBlock("corn_grinder",
             new CornGrinderBlock(AbstractBlock.Settings.create()
                     .strength(3.5f)
                     .sounds(BlockSoundGroup.STONE)
+                    .mapColor(MapColor.STONE_GRAY)
                     .nonOpaque()));
 
     public static final Block STOVE = registerBlock("stove",
             new Block(AbstractBlock.Settings.create()
                     .strength(3.5f)
                     .sounds(BlockSoundGroup.TUFF_BRICKS)
+                    .mapColor(MapColor.TERRACOTTA_GRAY)
                     .luminance(state -> 13)));
 
 

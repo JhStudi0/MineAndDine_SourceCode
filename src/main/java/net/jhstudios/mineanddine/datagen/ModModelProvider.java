@@ -1,18 +1,12 @@
 package net.jhstudios.mineanddine.datagen;
 
+import com.ibm.icu.text.Normalizer2;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.jhstudios.mineanddine.block.ModBlocks;
-import net.jhstudios.mineanddine.block.custom.CornCropBlock;
-import net.jhstudios.mineanddine.block.custom.RiceCropBlock;
-import net.jhstudios.mineanddine.block.custom.TomatoCropBlock;
-import net.jhstudios.mineanddine.block.custom.VanillaBeanCropBlock;
+import net.jhstudios.mineanddine.block.custom.CropBlocks.*;
 import net.jhstudios.mineanddine.item.ModItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -26,6 +20,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(ModBlocks.VANILLA_BEAN_CROP, VanillaBeanCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
         blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_CROP, TomatoCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.RICE_CROP, RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
+        blockStateModelGenerator.registerCrop(ModBlocks.ONION_CROP, OnionCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
+
 
 
     }
@@ -68,6 +64,4 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VEGETABLE_STOCK, Models.GENERATED);
         itemModelGenerator.register(ModItems.GARLIC, Models.GENERATED);
     }
-
-
 }

@@ -34,7 +34,8 @@ public class ModLootTableModifiers {
             new SeedEntry(ModItems.TOMATO_SEEDS, 5),
             new SeedEntry(ModItems.CORN_SEEDS, 5),
             new SeedEntry(ModItems.RICE_SEEDS, 5),
-            new SeedEntry(ModItems.VANILLA_SEEDS, 2)
+            new SeedEntry(ModItems.VANILLA_SEEDS, 2),
+            new SeedEntry(ModItems.ONION_SEEDS, 5)
     };
 
     public static void register() {

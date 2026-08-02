@@ -1,4 +1,4 @@
-package net.jhstudios.mineanddine.block.custom;
+package net.jhstudios.mineanddine.block.custom.CropBlocks;
 
 import net.jhstudios.mineanddine.item.ModItems;
 import net.minecraft.block.*;
