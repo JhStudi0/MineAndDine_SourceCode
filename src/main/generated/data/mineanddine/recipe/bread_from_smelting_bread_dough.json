@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 400,
+  "experience": 0.25,
+  "group": "bread_dough",
+  "ingredient": {
+    "item": "mineanddine:bread_dough"
+  },
+  "result": {
+    "id": "minecraft:bread"
+  }
+}

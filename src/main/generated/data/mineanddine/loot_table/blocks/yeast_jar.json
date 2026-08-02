@@ -1,0 +1,81 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "mineanddine:yeast_jar",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "0"
+              }
+            }
+          ],
+          "name": "mineanddine:yeast_jar"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "mineanddine:yeast_jar",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "1"
+              }
+            }
+          ],
+          "name": "mineanddine:yeast_jar"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "mineanddine:yeast_jar",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "2"
+              }
+            }
+          ],
+          "name": "mineanddine:yeast_jar"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "mineanddine:yeast_jar",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "age": "3"
+              }
+            }
+          ],
+          "name": "mineanddine:fermented_yeast_jar"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

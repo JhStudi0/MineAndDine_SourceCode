@@ -1,0 +1,16 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "container": {
+    "item": "minecraft:apple"
+  },
+  "cook_time": 300,
+  "ingredients": [
+    {
+      "item": "mineanddine:dark_chocolate"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:dark_chocolate_apple"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cook_time": 400,
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "mineanddine:rice_seeds"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:rice_bowl"
+  }
+}

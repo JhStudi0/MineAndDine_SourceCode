@@ -1,0 +1,10 @@
+{
+  "type": "mineanddine:corn_grinder",
+  "ingredient": {
+    "item": "minecraft:wheat"
+  },
+  "result": {
+    "count": 1,
+    "id": "mineanddine:flour"
+  }
+}

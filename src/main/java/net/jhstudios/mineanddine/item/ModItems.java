@@ -1,0 +1,143 @@
+package net.jhstudios.mineanddine.item;
+
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.jhstudios.mineanddine.MineAndDine;
+import net.jhstudios.mineanddine.block.ModBlocks;
+import net.jhstudios.mineanddine.item.custom.BowlFoodItem;
+import net.jhstudios.mineanddine.item.custom.JarFoodItem;
+import net.jhstudios.mineanddine.item.custom.RockItem;
+import net.jhstudios.mineanddine.util.ModTags;
+import net.minecraft.block.Blocks;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.FoodComponents;
+import net.minecraft.item.*;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+
+public class ModItems {
+
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(MineAndDine.MOD_ID, name), item);
+    }
+
+    public static final Item CORN_STEM = registerItem("corn_stem", new Item(new Item.Settings()));
+
+    public static final Item CORN = registerItem("corn", new Item(new Item.Settings()
+            .food(ModFoodComponents.CORN)));
+
+    public static final Item GRILLED_CORN = registerItem("grilled_corn", new Item(new Item.Settings()
+            .food(ModFoodComponents.GRILLED_CORN)));
+
+    public static final Item CORN_SEEDS = registerItem("corn_seeds",
+            new AliasedBlockItem(ModBlocks.CORN_CROP, new Item.Settings()));
+
+    public static final Item POPCORN = registerItem("popcorn", new Item(new Item.Settings()
+            .food(ModFoodComponents.CORN)));
+
+    public static final Item TOMATO = registerItem("tomato", new Item(new Item.Settings()
+            .food(ModFoodComponents.TOMATO)));
+
+    public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
+            new AliasedBlockItem(ModBlocks.TOMATO_CROP, new Item.Settings()));
+
+    public static final Item TOMATO_SAUCE = registerItem("tomato_sauce", new BowlFoodItem(new Item.Settings()
+            .food(ModFoodComponents.TOMATO_SAUCE)
+            .maxCount(1)));
+
+    public static final Item VANILLA_BEAN = registerItem("vanilla_bean", new Item(new Item.Settings()));
+
+    public static final Item VANILLA_SEEDS = registerItem("vanilla_seeds",
+            new AliasedBlockItem(ModBlocks.VANILLA_BEAN_CROP, new Item.Settings()));
+
+    public static final Item CHOCOLATE_CAKE = registerItem("chocolate_cake",
+            new AliasedBlockItem(ModBlocks.CHOCOLATE_CAKE, new Item.Settings()));
+
+    public static final Item POPPY_SEEDS = registerItem("poppy_seeds",
+            new AliasedBlockItem(Blocks.POPPY, new Item.Settings()));
+
+    public static final Item HONEY_COOKIE = registerItem("honey_cookie", new Item(new Item.Settings()
+            .food(ModFoodComponents.HONEY_COOKIE)));
+
+    public static final Item BUTTER = registerItem("butter", new Item(new Item.Settings()
+            .food(ModFoodComponents.BUTTER)));
+
+    public static final Item MILK_CHOCOLATE = registerItem("milk_chocolate", new Item(new Item.Settings()
+            .food(ModFoodComponents.CHOCOLATE)));
+
+    public static final Item DARK_CHOCOLATE = registerItem("dark_chocolate", new Item(new Item.Settings()
+            .food(ModFoodComponents.CHOCOLATE)));
+
+    public static final Item WHITE_CHOCOLATE = registerItem("white_chocolate", new Item(new Item.Settings()
+            .food(ModFoodComponents.CHOCOLATE)));
+
+    public static final Item MILK_CHOCOLATE_APPLE = registerItem("milk_chocolate_apple", new Item(new Item.Settings()
+            .food(ModFoodComponents.CHOCOLATE_APPLE)));
+
+    public static final Item DARK_CHOCOLATE_APPLE = registerItem("dark_chocolate_apple", new Item(new Item.Settings()
+            .food(ModFoodComponents.CHOCOLATE_APPLE)));
+
+    public static final Item WHITE_CHOCOLATE_APPLE = registerItem("white_chocolate_apple", new Item(new Item.Settings()
+            .food(ModFoodComponents.CHOCOLATE_APPLE)));
+
+    public static final Item RICE_SEEDS = registerItem("rice_seeds", new AliasedBlockItem(ModBlocks.RICE_CROP, new Item.Settings()));
+
+    public static final Item RICE_BOWL = registerItem("rice_bowl", new BowlFoodItem(new Item.Settings()
+            .food(ModFoodComponents.RICE_BOWL)
+            .maxCount(1)));
+
+    public static final Item ROCK = registerItem("rock", new RockItem(new Item.Settings()));
+
+    public static final Item SALT = registerItem("salt", new Item(new Item.Settings()));
+
+    public static final Item FLOUR = registerItem("flour", new Item(new Item.Settings()));
+
+    public static final Item JAR = registerItem("jar", new Item(new Item.Settings()));
+
+    public static final Item YEAST_JAR = registerItem("yeast_jar", new BlockItem(ModBlocks.YEAST_JAR, new Item.Settings()));
+
+    public static final Item FERMENTED_YEAST_JAR = registerItem("fermented_yeast_jar", new JarFoodItem(new Item.Settings()));
+
+    public static final Item BREAD_DOUGH = registerItem("bread_dough", new JarFoodItem(new Item.Settings()
+            .food(ModFoodComponents.BREAD_DOUGH)));
+
+    public static final Item SUSHI_COD = registerItem("sushi_cod", new Item(new Item.Settings()
+            .food(ModFoodComponents.SUSHI)));
+
+    public static final Item SUSHI_SALMON = registerItem("sushi_salmon", new Item(new Item.Settings()
+            .food(ModFoodComponents.SUSHI)));
+
+    public static final Item ONIGIRI = registerItem("onigiri", new Item(new Item.Settings()
+            .food(ModFoodComponents.SUSHI)));
+
+    public static final Item CHICKEN_LEG = registerItem("chicken_leg", new Item(new Item.Settings()
+            .food(ModFoodComponents.CHICKEN_LEG)));
+
+    public static final Item PLATE = registerItem("plate", new BlockItem(ModBlocks.PLATE, new Item.Settings()));
+
+    public static final Item CARAMEL = registerItem("caramel", new Item(new Item.Settings()
+            .food(ModFoodComponents.CARAMEL)));
+
+    public static final Item ONION = registerItem("onion", new Item(new Item.Settings()
+            .food(ModFoodComponents.ONION)));
+
+    public static final Item VEGETABLE_STOCK = registerItem("vegetable_stock", new Item(new Item.Settings()
+            .food(ModFoodComponents.STOCK)));
+
+    public static final Item CREAM = registerItem("cream", new Item(new Item.Settings()
+            .food(ModFoodComponents.CREAM)));
+
+    public static final Item GARLIC = registerItem("garlic", new Item(new Item.Settings()
+            .food(ModFoodComponents.GARLIC)));
+
+
+
+
+    public static void registerModItems() {
+        MineAndDine.LOGGER.info("Registering Mod Items for " + MineAndDine.MOD_ID);
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+
+        });
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "corn",
+  "ingredient": {
+    "item": "mineanddine:corn_seeds"
+  },
+  "result": {
+    "id": "mineanddine:popcorn"
+  }
+}

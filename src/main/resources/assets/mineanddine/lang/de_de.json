@@ -1,0 +1,71 @@
+{
+  "item.mineanddine.corn": "Maiskolben",
+  "item.mineanddine.corn_seeds": "Maissamen",
+  "item.mineanddine.popcorn": "Popcorn",
+  "item.mineanddine.grilled_corn": "Gegrillter Maiskolben",
+  "item.mineanddine.corn_stem": "Maisspindel",
+
+  "item.mineanddine.tomato_seeds": "Tomatensamen",
+  "item.mineanddine.tomato": "Tomate",
+  "item.mineanddine.tomato_sauce": "Tomatensauße",
+
+  "item.mineanddine.vanilla_seeds": "Vanilleschotensamen",
+  "item.mineanddine.vanilla_bean": "Vanilleschote",
+
+  "item.mineanddine.honey_cookie": "Honigkeks",
+
+  "item.mineanddine.butter": "Butter",
+
+  "item.mineanddine.poppy_seeds": "Mohnsamen",
+
+  "item.mineanddine.rice_seeds": "Reis",
+  "item.mineanddine.rice_bowl": "Gekochter Reis",
+  "item.mineanddine.sushi_cod": "Kabeljau Sushi",
+  "item.mineanddine.sushi_salmon": "Lachs Sushi",
+  "item.mineanddine.onigiri": "Onigiri",
+
+  "item.mineanddine.onion": "Zwiebel",
+
+  "item.mineanddine.garlic": "Knoblauch",
+
+  "item.mineanddine.vegetable_stock": "Gemüsebrühe",
+
+  "item.mineanddine.milk_chocolate": "Vollmilchschokolade",
+  "item.mineanddine.dark_chocolate": "Zartbitterschokolade",
+  "item.mineanddine.white_chocolate": "Weiße Schokolade",
+
+  "item.mineanddine.chocolate_cake": "Schokokuchen",
+
+  "item.mineanddine.milk_chocolate_apple": "Apfel mit Vollmilchschokoladenüberzug",
+  "item.mineanddine.dark_chocolate_apple": "Apfel mit Zartbitterschokoladenüberzug",
+  "item.mineanddine.white_chocolate_apple": "Apfel mit weißem Schokoladenüberzug",
+
+  "item.mineanddine.caramel": "Karamel",
+
+  "item.mineanddine.rock": "Kieselstein",
+
+  "item.mineanddine.jar": "Glas",
+  "block.mineanddine.yeast_jar": "Hefeglas",
+  "item.mineanddine.fermented_yeast_jar": "Fermentiertes Hefeglass",
+
+  "item.mineanddine.salt": "Salz",
+  "item.mineanddine.flour": "Mehl",
+  "item.mineanddine.bread_dough": "Brotteig",
+
+  "item.mineanddine.chicken_leg": "Hähnchenkeule",
+
+  "item.mineanddine.cream": "Sahne",
+
+  "itemgroup.mineanddine.mine_and_dine_seeds": "Mine and Dine Samen",
+  "itemgroup.mineanddine.mine_and_dine_ingredients": "Mine and Dine Zutaten",
+  "itemgroup.mineanddine.mine_and_dine_dishes": "Mine and Dine Mahlzeiten",
+  "itemgroup.mineanddine.mine_and_dine_utensils": "Mine and Dine Utensilien",
+  "itemgroup.mineanddine.mine_and_dine_misc": "Mine and Dine Verschiedenes",
+
+  "block.mineanddine.cooking_pot": "Kochtopf",
+  "block.mineanddine.corn_grinder": "Mühle",
+  "block.mineanddine.plate": "Teller",
+  "block.mineanddine.stove": "Herd",
+
+  "entity.mineanddine.rock": "Kieselstein"
+}

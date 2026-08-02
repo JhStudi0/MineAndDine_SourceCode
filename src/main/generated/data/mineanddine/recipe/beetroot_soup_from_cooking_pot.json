@@ -1,0 +1,22 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cook_time": 600,
+  "ingredients": [
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "mineanddine:onion"
+    },
+    {
+      "item": "mineanddine:vegetable_stock"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:beetroot_soup"
+  }
+}

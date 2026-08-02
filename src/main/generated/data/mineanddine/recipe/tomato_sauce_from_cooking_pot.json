@@ -1,0 +1,19 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cook_time": 300,
+  "ingredients": [
+    {
+      "item": "mineanddine:tomato"
+    },
+    {
+      "item": "mineanddine:tomato"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:tomato_sauce"
+  }
+}

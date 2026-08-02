@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bread_dough": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mineanddine:bread_dough"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mineanddine:bread_from_smelting_bread_dough"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bread_dough"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mineanddine:bread_from_smelting_bread_dough"
+    ]
+  }
+}

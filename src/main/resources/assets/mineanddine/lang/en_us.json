@@ -1,0 +1,71 @@
+{
+  "item.mineanddine.corn": "Corn Cob",
+  "item.mineanddine.corn_seeds": "Corn Seeds",
+  "item.mineanddine.popcorn": "Popcorn",
+  "item.mineanddine.grilled_corn": "Grilled Corn Cob",
+  "item.mineanddine.corn_stem": "Corn Stem",
+
+  "item.mineanddine.tomato_seeds": "Tomato Seeds",
+  "item.mineanddine.tomato": "Tomato",
+  "item.mineanddine.tomato_sauce": "Tomato Sauce",
+
+  "item.mineanddine.vanilla_seeds": "Vanilla Bean Seeds",
+  "item.mineanddine.vanilla_bean": "Vanilla Bean",
+
+  "item.mineanddine.honey_cookie": "Honey Cookie",
+
+  "item.mineanddine.butter": "Butter",
+
+  "item.mineanddine.poppy_seeds": "Poppy Seeds",
+
+  "item.mineanddine.rice_seeds": "Rice",
+  "item.mineanddine.rice_bowl": "Cooked Rice",
+  "item.mineanddine.sushi_cod": "Cod Sushi",
+  "item.mineanddine.sushi_salmon": "Salmon Sushi",
+  "item.mineanddine.onigiri": "Onigiri",
+
+  "item.mineanddine.onion": "Onion",
+
+  "item.mineanddine.garlic": "Garlic",
+
+  "item.mineanddine.vegetable_stock": "Vegetable Stock",
+
+  "item.mineanddine.milk_chocolate": "Milk Chocolate",
+  "item.mineanddine.dark_chocolate": "Dark Chocolate",
+  "item.mineanddine.white_chocolate": "White Chocolate",
+
+  "item.mineanddine.chocolate_cake": "Chocolate Cake",
+
+  "item.mineanddine.milk_chocolate_apple": "Milk Chocolate covered Apple",
+  "item.mineanddine.dark_chocolate_apple": "Dark Chocolate covered Apple",
+  "item.mineanddine.white_chocolate_apple": "White Chocolate covered Apple",
+
+  "item.mineanddine.caramel": "Caramel",
+
+  "item.mineanddine.rock": "Rock",
+
+  "item.mineanddine.jar": "Jar",
+  "block.mineanddine.yeast_jar": "Jar of Yeast",
+  "item.mineanddine.fermented_yeast_jar": "Jar of Fermented Yeast",
+
+  "item.mineanddine.salt": "Salt",
+  "item.mineanddine.flour": "Flour",
+  "item.mineanddine.bread_dough": "Bread Dough",
+
+  "item.mineanddine.chicken_leg": "Chicken Leg",
+
+  "item.mineanddine.cream": "Cream",
+
+  "itemgroup.mineanddine.mine_and_dine_seeds": "Mine and Dine Seeds",
+  "itemgroup.mineanddine.mine_and_dine_ingredients": "Mine and Dine Ingredients",
+  "itemgroup.mineanddine.mine_and_dine_dishes": "Mine and Dine Dishes",
+  "itemgroup.mineanddine.mine_and_dine_utensils": "Mine and Dine Utensils",
+  "itemgroup.mineanddine.mine_and_dine_misc": "Mine and Dine Miscellaneous",
+
+  "block.mineanddine.cooking_pot": "Cooking Pot",
+  "block.mineanddine.corn_grinder": "Grinder",
+  "block.mineanddine.plate": "Plate",
+  "block.mineanddine.stove": "Stove",
+
+  "entity.mineanddine.rock": "rock"
+}

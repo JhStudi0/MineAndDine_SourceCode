@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:poppy"
+    }
+  },
+  "pattern": [
+    "RR ",
+    "RR ",
+    "   "
+  ],
+  "result": {
+    "count": 4,
+    "id": "mineanddine:poppy_seeds"
+  }
+}

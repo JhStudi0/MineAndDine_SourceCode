@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "mineanddine:rice_bowl"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "mineanddine:onigiri"
+  }
+}

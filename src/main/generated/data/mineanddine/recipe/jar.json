@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "minecraft:planks"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    " B ",
+    "G G",
+    " G "
+  ],
+  "result": {
+    "count": 3,
+    "id": "mineanddine:jar"
+  }
+}

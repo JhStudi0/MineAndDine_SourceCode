@@ -1,0 +1,28 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cook_time": 600,
+  "ingredients": [
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "mineanddine:cream"
+    },
+    {
+      "item": "mineanddine:vegetable_stock"
+    },
+    {
+      "item": "mineanddine:butter"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:mushroom_stew"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 300,
+  "experience": 0.25,
+  "group": "grilled_corn",
+  "ingredient": {
+    "item": "mineanddine:corn"
+  },
+  "result": {
+    "id": "mineanddine:grilled_corn"
+  }
+}
