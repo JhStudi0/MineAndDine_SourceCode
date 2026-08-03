@@ -34,7 +34,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
 
-
         BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(CornCropBlock.AGE, 8));
         addDrop(ModBlocks.CORN_CROP, cropDrops(ModBlocks.CORN_CROP, ModItems.CORN, ModItems.CORN_SEEDS, builder));
@@ -55,6 +54,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder builder4 = BlockStatePropertyLootCondition.builder(ModBlocks.ONION_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(OnionCropBlock.AGE, OnionCropBlock.MAX_AGE));
         this.addDrop(ModBlocks.ONION_CROP, this.cropDrops(ModBlocks.ONION_CROP, ModItems.ONION, ModItems.ONION_SEEDS, builder4));
+
+        BlockStatePropertyLootCondition.Builder builder5 = BlockStatePropertyLootCondition.builder(ModBlocks.GARLIC_CROP).properties(StatePredicate.Builder.create()
+                .exactMatch(GarlicCropBlock.AGE, GarlicCropBlock.MAX_AGE));
+        this.addDrop(ModBlocks.GARLIC_CROP, this.cropDrops(ModBlocks.GARLIC_CROP, ModItems.GARLIC, ModItems.GARLIC_SEEDS, builder5));
 
 
         this.addDrop(ModBlocks.YEAST_JAR, LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(ModItems.YEAST_JAR))));

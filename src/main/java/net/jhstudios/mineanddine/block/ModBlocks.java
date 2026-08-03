@@ -64,6 +64,15 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .mapColor(MapColor.BROWN)));
 
+    public static final Block GARLIC_CROP = registerBlockWithoutBlockItem("garlic_crop",
+            new GarlicCropBlock(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .mapColor(MapColor.WHITE_GRAY)));
+
 
     public static final Block YEAST_JAR = registerBlockWithoutBlockItem("yeast_jar",
             new YeastJarBlock(AbstractBlock.Settings.create()
