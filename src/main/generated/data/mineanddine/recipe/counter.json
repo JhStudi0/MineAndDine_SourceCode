@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "minecraft:bricks"
+    },
+    "D": {
+      "item": "minecraft:polished_deepslate_slab"
+    }
+  },
+  "pattern": [
+    " D ",
+    " B ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:counter"
+  }
+}

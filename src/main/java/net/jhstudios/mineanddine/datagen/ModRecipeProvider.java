@@ -5,7 +5,9 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.CookingPotRecipeJsonBuilder;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.CornGrinderRecipeJsonBuilder;
+import net.jhstudios.mineanddine.datagen.customRecipeBuilders.PanRecipeJsonBuilder;
 import net.jhstudios.mineanddine.item.ModItems;
+import net.jhstudios.mineanddine.recipe.PanRecipe;
 import net.jhstudios.mineanddine.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -189,6 +191,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.BRICKS), conditionsFromItem(Blocks.BRICKS))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COUNTER)
+                .pattern(" D ")
+                .pattern(" B ")
+                .pattern("   ")
+                .input('D', Blocks.POLISHED_DEEPSLATE_SLAB)
+                .input('B', Blocks.BRICKS)
+                .criterion(hasItem(Blocks.BRICKS), conditionsFromItem(Blocks.BRICKS))
+                .offerTo(exporter);
+
 
 
 
@@ -248,6 +259,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.CREAM)
                 .input(ModItems.VEGETABLE_STOCK)
                 .offerTo(exporter);
+
+
     }
 
 }

@@ -5,7 +5,9 @@ import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.block.entity.custom.CookingPotBlockEntity;
 
 import net.jhstudios.mineanddine.block.entity.custom.CornGrinderBlockEntity;
+import net.jhstudios.mineanddine.block.entity.custom.PanBlockEntity;
 import net.jhstudios.mineanddine.block.entity.custom.PlateBlockEntity;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -25,6 +27,10 @@ public class ModBlockEntities {
     public static final BlockEntityType<CornGrinderBlockEntity> CORN_GRINDER_BE =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(MineAndDine.MOD_ID, "corn_grinder_be"),
                     BlockEntityType.Builder.create(CornGrinderBlockEntity::new, ModBlocks.CORN_GRINDER).build());
+
+    public static final BlockEntityType<PanBlockEntity> PAN_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(MineAndDine.MOD_ID, "pan_be"),
+                    BlockEntityType.Builder.create(PanBlockEntity::new, ModBlocks.PAN).build());
 
 
 

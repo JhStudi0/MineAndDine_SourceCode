@@ -28,6 +28,15 @@ public class ModRecipes {
         }
     });
 
+    public static final RecipeSerializer<PanRecipe> PAN_SERIALIZER = Registry.register(Registries.RECIPE_SERIALIZER, Identifier.of(MineAndDine.MOD_ID, "pan"), new PanRecipe.Serializer());
+
+    public static final RecipeType<PanRecipe> PAN_TYPE = Registry.register(Registries.RECIPE_TYPE, Identifier.of(MineAndDine.MOD_ID, "pan"), new RecipeType<PanRecipe>() {
+        @Override
+        public String toString() {
+            return "pan";
+        }
+    });
+
 
     public static void RegisterRecipes(){
         MineAndDine.LOGGER.info("Registering Custom Recipes for " + MineAndDine.MOD_ID);

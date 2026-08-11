@@ -10,6 +10,7 @@ import net.jhstudios.mineanddine.entity.ModEntities;
 import net.jhstudios.mineanddine.screen.ModScreenHandlers;
 import net.jhstudios.mineanddine.screen.custom.CookingPotScreen;
 import net.jhstudios.mineanddine.screen.custom.CornGrinderScreen;
+import net.jhstudios.mineanddine.screen.custom.PanScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -33,5 +34,7 @@ public class MineAndDineClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(ModBlockEntities.PLATE_BE, PlateBlockRenderer::new);
 
         HandledScreens.register(ModScreenHandlers.CORN_GRINDER_SCREEN_HANDLER, CornGrinderScreen::new);
+
+        HandledScreens.register(ModScreenHandlers.PAN_SCREEN_HANDLER, PanScreen::new);
     }
 }

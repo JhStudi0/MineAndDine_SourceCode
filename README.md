@@ -3,7 +3,7 @@
 ## Setup
 
 So you have three possible ways to get my mod:
-1. My Mod is on Modrinth! You cn either download it through the official [Modrinth page](https://modrinth.com/mod/mine-and-dine) or through the Modrinth launcher by simply searching "Mine and Dine".
+1. My Mod is on Modrinth! You can either download it through the official [Modrinth page](https://modrinth.com/mod/mine-and-dine) or through the Modrinth launcher by simply searching "Mine and Dine".
 2. You can also find easy to use .jar files at my [Releases Repo](https://github.com/JhStudi0/MineAndDineReleases).  
 3. Otherwise, this project can be downloaded via this repo. You can then open it in any java compatible coding software, the easiest is probably IntelliJ (It's the one I use for coding).
 
@@ -20,4 +20,4 @@ Additionally it adds a couple of other things, like yeast that ferments when pla
 ## Thanks
 
 Thanks to Juuz for making the implemented inventory that made my custom block creation a lot easier.  
-And a special thanks to Modding by Kaupenjoe (https://www.youtube.com/@ModdingByKaupenjoe) for the amazing tutorials that have helped me immensely.
+And a special thanks to Modding by Kaupenjoe (https://www.youtube.com/@ModdingByKaupenjoe) for the amazing tutorials that have helped me immensely on my modding journey.

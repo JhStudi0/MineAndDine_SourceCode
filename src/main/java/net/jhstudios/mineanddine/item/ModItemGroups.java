@@ -124,9 +124,12 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.COOKING_POT);
 
+                        entries.add(ModBlocks.PAN);
+
                         entries.add(ModBlocks.CORN_GRINDER);
 
                         entries.add(ModBlocks.STOVE);
+                        entries.add(ModBlocks.COUNTER);
 
                     }).build());
 

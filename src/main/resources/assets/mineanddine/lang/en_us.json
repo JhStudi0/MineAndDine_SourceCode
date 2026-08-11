@@ -70,6 +70,8 @@
   "block.mineanddine.corn_grinder": "Grinder",
   "block.mineanddine.plate": "Plate",
   "block.mineanddine.stove": "Stove",
+  "block.mineanddine.counter": "Counter",
+  "block.mineanddine.pan": "Frying Pan",
 
   "entity.mineanddine.rock": "rock"
 }

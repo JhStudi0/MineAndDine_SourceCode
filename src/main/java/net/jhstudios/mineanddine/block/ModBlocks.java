@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.CakeBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.client.particle.BlockLeakParticle;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -98,6 +99,13 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE_GRAY)
                     .nonOpaque()));
 
+    public static final Block PAN = registerBlock("pan",
+            new PanBlock(AbstractBlock.Settings.create()
+                    .strength(2.5f)
+                    .sounds(BlockSoundGroup.COPPER)
+                    .mapColor(MapColor.STONE_GRAY)
+                    .nonOpaque()));
+
     public static final Block PLATE = registerBlockWithoutBlockItem("plate",
             new PlateBlock(AbstractBlock.Settings.create()
                     .strength(1.25f)
@@ -114,10 +122,16 @@ public class ModBlocks {
 
     public static final Block STOVE = registerBlock("stove",
             new StoveBlock(AbstractBlock.Settings.create()
-                    .strength(3.5f)
+                    .strength(3.5f, 6.0f)
                     .sounds(BlockSoundGroup.TUFF_BRICKS)
                     .mapColor(MapColor.TERRACOTTA_GRAY)
                     .luminance(state -> 13)));
+
+    public static final Block COUNTER = registerBlock("counter",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.TUFF_BRICKS)
+                    .mapColor(MapColor.TERRACOTTA_GRAY)));
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {

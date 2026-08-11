@@ -70,6 +70,8 @@
   "block.mineanddine.corn_grinder": "Mühle",
   "block.mineanddine.plate": "Teller",
   "block.mineanddine.stove": "Herd",
+  "block.mineanddine.counter": "Arbeitsfläche",
+  "block.mineanddine.pan": "Pfanne",
 
   "entity.mineanddine.rock": "Kieselstein"
 }

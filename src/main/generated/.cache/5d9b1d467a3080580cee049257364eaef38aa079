@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-03T16:29:02.8048058	Mine and Dine/Recipes
+// 1.21.1	2026-08-11T22:09:08.816316	Mine and Dine/Recipes
 2657a288733cf8095b2d17729d820a13e484828b data\mineanddine\advancement\recipes\food\corn_seeds.json
 703cf1b656683f37f842239b3fec430b75e45e02 data\mineanddine\advancement\recipes\food\bread_from_smelting_bread_dough.json
 41f946d3ed066f5c26cc22b3919ba55471e97e30 data\mineanddine\advancement\recipes\food\popcorn_from_smelting_corn_seeds.json
@@ -28,6 +28,7 @@ b35754568d61d021f079e56f8da3b9ecd7802106 data\mineanddine\recipe\tomato_sauce_fr
 c77f8eb9fdadf37c26e436b0e5372a5587370229 data\mineanddine\advancement\recipes\misc\stove.json
 534da512bc20afa6d1e432c23d9a2ce44720ccf8 data\mineanddine\recipe\flour_from_corn_grinder.json
 499e62e183eae0b9b75d0a550b0299c8f6528c10 data\mineanddine\recipe\sushi_cod.json
+d9dd2a9b8445c7bd4f013bb80283ab969e169c3a data\mineanddine\recipe\counter.json
 9ac4240fd037db18c69a9b3f6d6cbe5e52f5ad41 data\mineanddine\recipe\stove.json
 d93f72c35915e2a19f266025c227698e05716987 data\mineanddine\recipe\cobblestone.json
 5f55b835676ccd4e1174d68b3f1bc3e4db3103c9 data\mineanddine\advancement\recipes\food\grilled_corn_from_smelting_corn.json
@@ -35,6 +36,7 @@ f5a89a014f0507186e4fe2db3d82453c992830bd data\mineanddine\advancement\recipes\fo
 c4c57f0e2ed7b0d8035f6e348f7ecce9ee1c25b3 data\mineanddine\advancement\recipes\food\white_chocolate.json
 c541c1b376c7957312846620da2a3f875e476084 data\mineanddine\advancement\recipes\misc\jar.json
 d8789d3c7415ee7768e1dd739c065bff9ce89ebf data\mineanddine\recipe\dark_chocolate.json
+f215495333e03554731ebc919c4c0a4aaf99d6a7 data\mineanddine\advancement\recipes\building_blocks\counter.json
 386bb1510a7825a9bef3bf2f8c99738c55c49aa2 data\mineanddine\recipe\rice_bowl_from_cooking_pot.json
 949c717d54fbb317d7e2f14dfb7855a4962221aa data\mineanddine\recipe\chocolate_cake.json
 af5c22237f5c56c72236e14c9fbd59ed1b0a3cca data\mineanddine\advancement\recipes\food\onigiri.json
