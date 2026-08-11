@@ -240,6 +240,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         CookingPotRecipeJsonBuilder.create(Ingredient.ofItems(Items.APPLE), ModItems.WHITE_CHOCOLATE_APPLE, 300)
                 .input(ModItems.WHITE_CHOCOLATE)
                 .offerTo(exporter);
+
+        CookingPotRecipeJsonBuilder.create(Ingredient.ofItems(Items.BOWL), ModItems.CARROT_SOUP, 600)
+                .input(ModItems.ONION)
+                .input(Items.CARROT, 2)
+                .input(Items.POTATO)
+                .input(ModItems.CREAM)
+                .input(ModItems.VEGETABLE_STOCK)
+                .offerTo(exporter);
     }
 
 }

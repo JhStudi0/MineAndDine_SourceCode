@@ -92,6 +92,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.TOMATO_SAUCE);
 
+                        entries.add(ModItems.CARROT_SOUP);
+
                         entries.add(ModItems.RICE_BOWL);
 
                         entries.add(ModItems.SUSHI_COD);

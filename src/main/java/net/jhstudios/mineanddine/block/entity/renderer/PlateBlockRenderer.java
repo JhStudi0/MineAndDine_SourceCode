@@ -1,5 +1,6 @@
 package net.jhstudios.mineanddine.block.entity.renderer;
 
+import net.jhstudios.mineanddine.block.custom.PlateBlock;
 import net.jhstudios.mineanddine.block.entity.custom.PlateBlockEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
@@ -28,9 +29,17 @@ public class PlateBlockRenderer implements BlockEntityRenderer<PlateBlockEntity>
         matrices.push();
         matrices.translate(0.5f, 0.15f, 0.5f);
         matrices.scale(0.5f, 0.5f, 0.5f);
+
+        switch (entity.getCachedState().get(PlateBlock.FACING)) {
+            case SOUTH -> matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
+            case WEST -> matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(90));
+            case EAST -> matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-90));
+            default -> {}
+        }
+
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90));
 
-        itemRenderer.renderItem(stack, ModelTransformationMode.GUI, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
+        itemRenderer.renderItem(stack, ModelTransformationMode.FIXED, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
         matrices.pop();
     }
 

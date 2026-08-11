@@ -86,6 +86,10 @@ public class ModItems {
             .food(ModFoodComponents.RICE_BOWL)
             .maxCount(1)));
 
+    public static final Item CARROT_SOUP = registerItem("carrot_soup", new BowlFoodItem(new Item.Settings()
+            .food(FoodComponents.BEETROOT_SOUP)
+            .maxCount(1)));
+
     public static final Item ONION_SEEDS = registerItem("onion_seeds", new AliasedBlockItem(ModBlocks.ONION_CROP, new Item.Settings()));
 
     public static final Item GARLIC_SEEDS = registerItem("garlic_seeds", new AliasedBlockItem(ModBlocks.GARLIC_CROP, new Item.Settings()));

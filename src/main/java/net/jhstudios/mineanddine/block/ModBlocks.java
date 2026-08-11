@@ -113,7 +113,7 @@ public class ModBlocks {
                     .nonOpaque()));
 
     public static final Block STOVE = registerBlock("stove",
-            new Block(AbstractBlock.Settings.create()
+            new StoveBlock(AbstractBlock.Settings.create()
                     .strength(3.5f)
                     .sounds(BlockSoundGroup.TUFF_BRICKS)
                     .mapColor(MapColor.TERRACOTTA_GRAY)

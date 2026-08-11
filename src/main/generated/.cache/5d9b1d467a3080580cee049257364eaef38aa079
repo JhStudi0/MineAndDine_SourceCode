@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-03T15:25:51.4171375	Mine and Dine/Recipes
+// 1.21.1	2026-08-03T16:29:02.8048058	Mine and Dine/Recipes
 2657a288733cf8095b2d17729d820a13e484828b data\mineanddine\advancement\recipes\food\corn_seeds.json
 703cf1b656683f37f842239b3fec430b75e45e02 data\mineanddine\advancement\recipes\food\bread_from_smelting_bread_dough.json
 41f946d3ed066f5c26cc22b3919ba55471e97e30 data\mineanddine\advancement\recipes\food\popcorn_from_smelting_corn_seeds.json
@@ -39,6 +39,7 @@ d8789d3c7415ee7768e1dd739c065bff9ce89ebf data\mineanddine\recipe\dark_chocolate.
 949c717d54fbb317d7e2f14dfb7855a4962221aa data\mineanddine\recipe\chocolate_cake.json
 af5c22237f5c56c72236e14c9fbd59ed1b0a3cca data\mineanddine\advancement\recipes\food\onigiri.json
 b4eb5d82e63a19d0bb597e64afdf5dc24631fb38 data\mineanddine\recipe\mushroom_stew_from_cooking_pot.json
+719b76e42d7e855f5c598e1ce9dfaec90733579e data\mineanddine\recipe\carrot_soup_from_cooking_pot.json
 8a3026c5037e4f80507308a51d78c9df235bc534 data\mineanddine\recipe\white_chocolate_apple_from_cooking_pot.json
 f7194ac334b8a4f24ea5190c0916c076a0d25f6e data\mineanddine\recipe\corn_seeds.json
 5385d9caa1f5b956607a63466a54633a8ed0854d data\mineanddine\advancement\recipes\food\sushi_cod.json

@@ -1,0 +1,31 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cook_time": 600,
+  "ingredients": [
+    {
+      "item": "mineanddine:onion"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "mineanddine:cream"
+    },
+    {
+      "item": "mineanddine:vegetable_stock"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:carrot_soup"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "mineanddine:block/stove_side",
+    "down": "minecraft:block/bricks",
+    "up": "mineanddine:block/stove_top",
+    "north": "mineanddine:block/stove_front",
+    "south": "mineanddine:block/stove_side",
+    "east": "mineanddine:block/stove_side",
+    "west": "mineanddine:block/stove_side"
+  }
+}
