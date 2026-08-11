@@ -1,6 +1,7 @@
 package net.jhstudios.mineanddine.block.custom.CropBlocks;
 
 import net.jhstudios.mineanddine.item.ModItems;
+import net.jhstudios.mineanddine.util.ModTags;
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -93,9 +94,7 @@ public class RiceCropBlock extends CropBlock implements Waterloggable {
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockState below = world.getBlockState(pos.down());
 
-        boolean validSoil = below.isOf(Blocks.FARMLAND)
-                || below.isOf(Blocks.DIRT)
-                || below.isOf(Blocks.SAND);
+        boolean validSoil = below.isIn(ModTags.Blocks.NUTRITIONAL_BLOCKS);
 
         boolean hasWater = world.getFluidState(pos).isOf(Fluids.WATER);
 

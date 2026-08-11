@@ -1,0 +1,13 @@
+{
+  "values": [
+    "minecraft:farmland",
+    "minecraft:dirt",
+    "minecraft:grass_block",
+    "minecraft:gravel",
+    "minecraft:suspicious_gravel",
+    "minecraft:sand",
+    "minecraft:suspicious_sand",
+    "minecraft:red_sand",
+    "minecraft:coarse_dirt"
+  ]
+}
