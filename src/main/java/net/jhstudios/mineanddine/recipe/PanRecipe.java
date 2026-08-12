@@ -17,8 +17,9 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
-public record PanRecipe(DefaultedList<Ingredient> ingredients, Ingredient container, ItemStack output, int cookTime) implements Recipe<CookingPotRecipeInput> {
+public record PanRecipe(DefaultedList<Ingredient> ingredients, Optional<Ingredient> container, ItemStack output, int cookTime) implements Recipe<CookingPotRecipeInput> {
     @Override
     public boolean matches(CookingPotRecipeInput input, World world) {
         List<ItemStack> remaining = new ArrayList<>();
@@ -86,20 +87,41 @@ public record PanRecipe(DefaultedList<Ingredient> ingredients, Ingredient contai
         public static final MapCodec<PanRecipe> CODEC =
                 RecordCodecBuilder.mapCodec(instance -> instance.group(
                         Ingredient.DISALLOW_EMPTY_CODEC.listOf().fieldOf("ingredients").forGetter(PanRecipe::ingredients),
-                        Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("container").forGetter(PanRecipe::container),
+                        Ingredient.DISALLOW_EMPTY_CODEC.optionalFieldOf("container").forGetter(PanRecipe::container),
                         ItemStack.VALIDATED_CODEC.fieldOf("result").forGetter(PanRecipe::output),
                         com.mojang.serialization.Codec.INT.optionalFieldOf("cook_time", 200).forGetter(PanRecipe::cookTime)
                 ).apply(instance, (ingredients, container, result, cookTime) -> new PanRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), container, result, cookTime)));
 
 
 
-        public static final PacketCodec<RegistryByteBuf, PanRecipe> STREAM_CODEC = PacketCodec.tuple(
-                Ingredient.PACKET_CODEC.collect(PacketCodecs.toList()),
-                recipe -> new ArrayList<>(recipe.ingredients()),
-                Ingredient.PACKET_CODEC, PanRecipe::container,
-                ItemStack.PACKET_CODEC, PanRecipe::output,
-                PacketCodecs.INTEGER, PanRecipe::cookTime,
-                ((ingredients,container, result, cookTime) -> new PanRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), container, result, cookTime)));
+        public static final PacketCodec<RegistryByteBuf, PanRecipe> STREAM_CODEC =
+                PacketCodec.tuple(
+                        // 1. Ingredients
+                        Ingredient.PACKET_CODEC.collect(PacketCodecs.toList()),
+                        recipe -> new ArrayList<>(recipe.ingredients()),
+
+                        // 2. Container (optional Ingredient) - PASS THE OPTIONAL DIRECTLY!
+                        PacketCodecs.optional(Ingredient.PACKET_CODEC),
+                        PanRecipe::container,  // ✅ Returns Optional<Ingredient>
+
+                        // 3. Output
+                        ItemStack.PACKET_CODEC,
+                        PanRecipe::output,
+
+                        // 4. Cook Time
+                        PacketCodecs.INTEGER,
+                        PanRecipe::cookTime,
+
+                        // Decoder - container is already Optional
+                        ((List<Ingredient> ingredients, Optional<Ingredient> container, ItemStack result, Integer cookTime) ->
+                                new PanRecipe(
+                                        DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])),
+                                        container,  // ✅ Already Optional<Ingredient>
+                                        result,
+                                        cookTime
+                                )
+                        )
+                );
 
         @Override
         public MapCodec<PanRecipe> codec() {

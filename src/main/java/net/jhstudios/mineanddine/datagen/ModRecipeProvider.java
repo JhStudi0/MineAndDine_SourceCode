@@ -261,6 +261,33 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 
 
+        PanRecipeJsonBuilder.create(Items.COOKED_BEEF, 300)
+                .input(Items.BEEF)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(Items.COOKED_CHICKEN, 300)
+                .input(Items.CHICKEN)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(Items.COOKED_PORKCHOP, 300)
+                .input(Items.PORKCHOP)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(Items.COOKED_MUTTON, 300)
+                .input(Items.MUTTON)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(Items.COOKED_RABBIT, 300)
+                .input(Items.RABBIT)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(Items.COOKED_COD, 300)
+                .input(Items.COD)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(Items.COOKED_SALMON, 300)
+                .input(Items.SALMON)
+                .offerTo(exporter);
     }
 
 }
