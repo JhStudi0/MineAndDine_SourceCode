@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class PanBlock extends BlockWithEntity implements BlockEntityProvider {
-    VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 8, 15);
+    VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 3, 15);
     public static final MapCodec<PanBlock> CODEC = PanBlock.createCodec(PanBlock::new);
 
     public PanBlock(Settings settings) {
