@@ -22,9 +22,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(ModBlocks.RICE_CROP, RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
         blockStateModelGenerator.registerCrop(ModBlocks.ONION_CROP, OnionCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
         blockStateModelGenerator.registerCrop(ModBlocks.GARLIC_CROP, GarlicCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
-
-
-
     }
 
     @Override
@@ -65,5 +62,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VEGETABLE_STOCK, Models.GENERATED);
         itemModelGenerator.register(ModItems.GARLIC, Models.GENERATED);
         itemModelGenerator.register(ModItems.CARROT_SOUP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SUNFLOWER_SEEDS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GROUND_SUNFLOWER_SEEDS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SUNFLOWER_OIL, Models.GENERATED);
     }
 }

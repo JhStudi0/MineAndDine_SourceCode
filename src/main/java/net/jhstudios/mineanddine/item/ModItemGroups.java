@@ -29,6 +29,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.POPPY_SEEDS);
 
+                        entries.add(ModItems.SUNFLOWER_SEEDS);
+
                         entries.add(ModItems.ONION_SEEDS);
 
                         entries.add(ModItems.GARLIC_SEEDS);
@@ -78,6 +80,10 @@ public class ModItemGroups {
                         entries.add(ModItems.CREAM);
 
                         entries.add(ModItems.POPPY_SEEDS);
+
+                        entries.add(ModItems.SUNFLOWER_SEEDS);
+                        entries.add(ModItems.GROUND_SUNFLOWER_SEEDS);
+                        entries.add(ModItems.SUNFLOWER_OIL);
 
                     }).build());
 

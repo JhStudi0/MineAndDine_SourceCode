@@ -1,0 +1,10 @@
+{
+  "type": "mineanddine:corn_grinder",
+  "ingredient": {
+    "item": "mineanddine:sunflower_seeds"
+  },
+  "result": {
+    "count": 1,
+    "id": "mineanddine:ground_sunflower_seeds"
+  }
+}

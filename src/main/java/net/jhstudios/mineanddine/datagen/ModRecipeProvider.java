@@ -116,6 +116,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.RICE_BOWL), conditionsFromItem(ModItems.RICE_BOWL))
                 .offerTo(exporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SUNFLOWER_OIL)
+                .input(Items.GLASS_BOTTLE)
+                .input(Items.POTION)
+                .input(ModItems.GROUND_SUNFLOWER_SEEDS)
+                .criterion(hasItem(ModItems.GROUND_SUNFLOWER_SEEDS), conditionsFromItem(ModItems.GROUND_SUNFLOWER_SEEDS))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SUNFLOWER_SEEDS, 1)
+                .input(Items.SUNFLOWER)
+                .criterion(hasItem(Items.SUNFLOWER), conditionsFromItem(Items.SUNFLOWER))
+                .offerTo(exporter);
+
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.POPPY_SEEDS, 4)
@@ -181,6 +193,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PAN)
+                .pattern("   ")
+                .pattern("N N")
+                .pattern("CCC")
+                .input('C', Items.COPPER_INGOT)
+                .input('N', Items.IRON_NUGGET)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.STOVE)
                 .pattern("DDD")
                 .pattern("BCB")
@@ -206,6 +227,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         CornGrinderRecipeJsonBuilder.create(Items.WHEAT, ModItems.FLOUR).offerTo(exporter);
 
         CornGrinderRecipeJsonBuilder.create(Items.SUGAR_CANE, Items.SUGAR).offerTo(exporter);
+
+        CornGrinderRecipeJsonBuilder.create(ModItems.SUNFLOWER_SEEDS, ModItems.GROUND_SUNFLOWER_SEEDS).offerTo(exporter);
 
 
 

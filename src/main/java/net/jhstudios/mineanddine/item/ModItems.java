@@ -7,6 +7,7 @@ import net.jhstudios.mineanddine.item.custom.BowlFoodItem;
 import net.jhstudios.mineanddine.item.custom.JarFoodItem;
 import net.jhstudios.mineanddine.item.custom.RockItem;
 import net.jhstudios.mineanddine.util.ModTags;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.FoodComponents;
@@ -55,6 +56,14 @@ public class ModItems {
 
     public static final Item POPPY_SEEDS = registerItem("poppy_seeds",
             new AliasedBlockItem(Blocks.POPPY, new Item.Settings()));
+
+    public static final Item SUNFLOWER_SEEDS = registerItem("sunflower_seeds",
+            new AliasedBlockItem(Blocks.SUNFLOWER, new Item.Settings()));
+
+    public static final Item GROUND_SUNFLOWER_SEEDS = registerItem("ground_sunflower_seeds", new Item(new Item.Settings()));
+
+    public static final Item SUNFLOWER_OIL = registerItem("sunflower_oil", new Item(new Item.Settings()
+            .food(ModFoodComponents.BUTTER)));
 
     public static final Item HONEY_COOKIE = registerItem("honey_cookie", new Item(new Item.Settings()
             .food(ModFoodComponents.HONEY_COOKIE)));

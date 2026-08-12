@@ -1,6 +1,7 @@
-// 1.21.1	2026-08-12T15:00:47.2580547	Mine and Dine/Model Definitions
+// 1.21.1	2026-08-13T01:00:41.8062242	Mine and Dine/Model Definitions
 efc19122dda0eb14e1b06e1f7fa126b35f6a604d assets\mineanddine\models\item\corn_stem.json
 cec10798a6d63ad02b3d0a0af9c707ef3ae00e51 assets\mineanddine\models\item\poppy_seeds.json
+90c0649cacee29e654db78541f84f0815bbe74d1 assets\mineanddine\models\item\sunflower_seeds.json
 488493ce1d9f8c2eaa4fa0a861773db569c37b19 assets\mineanddine\models\item\white_chocolate_apple.json
 f30b6c3a5a70f2c10302215ea307625b20bd58f0 assets\mineanddine\models\item\onion.json
 43f0e4f85b40eee1c4609ca0d2079c7611154256 assets\mineanddine\models\block\tomato_crop_stage1.json
@@ -15,6 +16,7 @@ b146da19ecc0c49629e01577a9a9333aa1b0121b assets\mineanddine\models\block\tomato_
 11c5a14dcb42bc4db98d0220dc88eac9c6d5b5b5 assets\mineanddine\models\block\vanilla_bean_crop_stage8.json
 6c9d2dbec6582e3c301f5138e2f8d2ea36446ab1 assets\mineanddine\blockstates\tomato_crop.json
 215fc64b82173015c200c12d9d6cf58e30729716 assets\mineanddine\models\block\corn_crop_stage1.json
+9848a74d24055f91f61d2d49f94220ff170f9a0c assets\mineanddine\models\item\sunflower_oil.json
 28f000751c5b6f2fc600ee847b0fae30943b1e8f assets\mineanddine\models\block\garlic_crop_stage0.json
 149d598892da5a234ab58ab785ad208f1e92b762 assets\mineanddine\blockstates\rice_crop.json
 ee8f5a169502d9ee26b440448c9af4211c13e157 assets\mineanddine\models\item\tomato.json
@@ -31,6 +33,7 @@ f448d61865e9199e75c85a286f9156b4df544e42 assets\mineanddine\models\block\onion_c
 b0976b747d137f7c2dd2ee3881361c912cdd30c9 assets\mineanddine\models\item\carrot_soup.json
 8824fe93f4467a6b6d7b64fb4889fc66c5590ab7 assets\mineanddine\models\block\rice_crop_stage7.json
 79e86e02022256b27245d45826e75efda103d965 assets\mineanddine\models\block\corn_crop_stage7.json
+59e350014927457042246d7c2289f8c7625d4281 assets\mineanddine\models\item\ground_sunflower_seeds.json
 2114015a88901c990844fbdf55057068c7238cbf assets\mineanddine\models\block\vanilla_bean_crop_stage0.json
 cbf3a72006a8493737c34543cb151b3ca24f9179 assets\mineanddine\models\block\vanilla_bean_crop_stage6.json
 935664fb1f4c0d3b0a6f4725cafe3e794d8562e8 assets\mineanddine\models\block\corn_crop_stage3.json
@@ -76,8 +79,8 @@ e99f5fea1f59241a4dd24436be21cd025d30b0fd assets\mineanddine\models\item\dark_cho
 1e28647fa711d89a46a9e33b91beaaf64977bcb0 assets\mineanddine\models\block\garlic_crop_stage6.json
 ca861bf4a03d52f81e34582f04ace54bef30ece6 assets\mineanddine\models\item\dark_chocolate_apple.json
 759d6ede16bda33d396a6f5c93fc8c43131c397d assets\mineanddine\models\block\corn_crop_stage2.json
-96adac92cd5353cb7bd21bfcae7b3cc2057317b4 assets\mineanddine\models\block\garlic_crop_stage2.json
 cac11d5196306ede764da2701f933916b2e322d6 assets\mineanddine\models\item\tomato_seeds.json
+96adac92cd5353cb7bd21bfcae7b3cc2057317b4 assets\mineanddine\models\block\garlic_crop_stage2.json
 7aca1d1afc2e75546ff5efdea788cb2a59383ad2 assets\mineanddine\blockstates\garlic_crop.json
 d690d360a93ae7eac5c4d539bb936bc6492c147e assets\mineanddine\models\item\garlic_seeds.json
 20fe5c09b576998c7dcc2c2f5abeb37bc296716d assets\mineanddine\models\block\rice_crop_stage2.json
