@@ -21,6 +21,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import org.apache.commons.codec.language.bm.Rule;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -123,10 +124,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.GROUND_SUNFLOWER_SEEDS), conditionsFromItem(ModItems.GROUND_SUNFLOWER_SEEDS))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SUNFLOWER_SEEDS, 1)
-                .input(Items.SUNFLOWER)
-                .criterion(hasItem(Items.SUNFLOWER), conditionsFromItem(Items.SUNFLOWER))
-                .offerTo(exporter);
 
 
 
@@ -136,6 +133,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .input('R', Items.POPPY)
                 .criterion(hasItem(Items.POPPY), conditionsFromItem(Items.POPPY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SUNFLOWER_SEEDS, 4)
+                .pattern("SS ")
+                .pattern("SS ")
+                .pattern("   ")
+                .input('S', Items.SUNFLOWER)
+                .criterion(hasItem(Items.SUNFLOWER), conditionsFromItem(Items.SUNFLOWER))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.COBBLESTONE)

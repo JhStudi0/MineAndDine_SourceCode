@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-13T01:00:41.808207	Mine and Dine/Recipes
+// 1.21.1	2026-08-13T22:23:34.5024554	Mine and Dine/Recipes
 2657a288733cf8095b2d17729d820a13e484828b data\mineanddine\advancement\recipes\food\corn_seeds.json
 703cf1b656683f37f842239b3fec430b75e45e02 data\mineanddine\advancement\recipes\food\bread_from_smelting_bread_dough.json
 41f946d3ed066f5c26cc22b3919ba55471e97e30 data\mineanddine\advancement\recipes\food\popcorn_from_smelting_corn_seeds.json
@@ -14,7 +14,7 @@ cfed98622ec4bd5851b97497861f476b1e945726 data\mineanddine\recipe\white_chocolate
 40903abaffeaab7c4626f60a4ec8232a133e3192 data\mineanddine\recipe\tomato_seeds.json
 628c960812a2d211799e507c92872e909aad2dcc data\mineanddine\advancement\recipes\food\sunflower_oil.json
 d92132e808ff1b096600889879ccb9163a94ca0e data\mineanddine\advancement\recipes\misc\rock.json
-44f412079c3dc156edbe900492a756ff3794e85e data\mineanddine\recipe\sunflower_seeds.json
+5b24d0e228d4d0a646163f5b169c5586277673ec data\mineanddine\recipe\sunflower_seeds.json
 3ac016cafe4c393807d6b11cb8ad965c61374f9b data\mineanddine\recipe\corn_grinder.json
 82ebd88ed89c299cc29a050cb44b68f2e2ff83f4 data\mineanddine\advancement\recipes\misc\poppy_seeds.json
 32e8e22983c55e5c98740981e61453be6901d8da data\mineanddine\recipe\bread_from_smelting_bread_dough.json
@@ -43,12 +43,12 @@ d93f72c35915e2a19f266025c227698e05716987 data\mineanddine\recipe\cobblestone.jso
 5f55b835676ccd4e1174d68b3f1bc3e4db3103c9 data\mineanddine\advancement\recipes\food\grilled_corn_from_smelting_corn.json
 f5a89a014f0507186e4fe2db3d82453c992830bd data\mineanddine\advancement\recipes\food\honey_cookie.json
 c4c57f0e2ed7b0d8035f6e348f7ecce9ee1c25b3 data\mineanddine\advancement\recipes\food\white_chocolate.json
+ad6d964d58703ca02b5c39c73041e1fbcfda273b data\mineanddine\advancement\recipes\misc\sunflower_seeds.json
 c541c1b376c7957312846620da2a3f875e476084 data\mineanddine\advancement\recipes\misc\jar.json
 9a3368e0a9bbc9b6db8fab084a8851a6a8ce00ac data\mineanddine\recipe\pan.json
 d8789d3c7415ee7768e1dd739c065bff9ce89ebf data\mineanddine\recipe\dark_chocolate.json
 f215495333e03554731ebc919c4c0a4aaf99d6a7 data\mineanddine\advancement\recipes\building_blocks\counter.json
 386bb1510a7825a9bef3bf2f8c99738c55c49aa2 data\mineanddine\recipe\rice_bowl_from_cooking_pot.json
-ad6d964d58703ca02b5c39c73041e1fbcfda273b data\mineanddine\advancement\recipes\food\sunflower_seeds.json
 949c717d54fbb317d7e2f14dfb7855a4962221aa data\mineanddine\recipe\chocolate_cake.json
 af5c22237f5c56c72236e14c9fbd59ed1b0a3cca data\mineanddine\advancement\recipes\food\onigiri.json
 b4eb5d82e63a19d0bb597e64afdf5dc24631fb38 data\mineanddine\recipe\mushroom_stew_from_cooking_pot.json
