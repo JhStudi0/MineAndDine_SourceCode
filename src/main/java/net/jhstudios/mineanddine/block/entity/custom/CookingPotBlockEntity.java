@@ -1,6 +1,7 @@
 package net.jhstudios.mineanddine.block.entity.custom;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.jhstudios.mineanddine.block.custom.CookingPotBlock;
 import net.jhstudios.mineanddine.block.entity.ImplementedInventory;
 import net.jhstudios.mineanddine.block.entity.ModBlockEntities;
 import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipe;
@@ -9,6 +10,7 @@ import net.jhstudios.mineanddine.recipe.ModRecipes;
 import net.jhstudios.mineanddine.screen.custom.CookingPotScreenHandler;
 import net.jhstudios.mineanddine.util.ModTags;
 import net.minecraft.block.AbstractFurnaceBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
@@ -28,6 +30,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockCollisionSpliterator;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -123,6 +126,9 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
         }
 
         if (hasRecipe()) {
+            if (!state.get(CookingPotBlock.COOKING)) {
+                world.setBlockState(pos, state.with(CookingPotBlock.COOKING, true), Block.NOTIFY_ALL);
+            }
             maxProgress = recipe.get().value().cookTime();
             increaseCraftingProgress();
             markDirty(world, pos, state);
@@ -133,6 +139,9 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
             }
         } else {
             resetProgress();
+            if (state.get(CookingPotBlock.COOKING)) {
+                world.setBlockState(pos, state.with(CookingPotBlock.COOKING, false), Block.NOTIFY_ALL);
+            }
         }
 
     }

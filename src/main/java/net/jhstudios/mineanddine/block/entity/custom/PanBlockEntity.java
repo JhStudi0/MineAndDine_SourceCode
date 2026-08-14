@@ -1,6 +1,7 @@
 package net.jhstudios.mineanddine.block.entity.custom;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.jhstudios.mineanddine.block.custom.PanBlock;
 import net.jhstudios.mineanddine.block.entity.ImplementedInventory;
 import net.jhstudios.mineanddine.block.entity.ModBlockEntities;
 import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipeInput;
@@ -9,6 +10,7 @@ import net.jhstudios.mineanddine.recipe.custom.PanRecipe;
 import net.jhstudios.mineanddine.screen.custom.PanScreenHandler;
 import net.jhstudios.mineanddine.util.ModTags;
 import net.minecraft.block.AbstractFurnaceBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
@@ -122,6 +124,10 @@ public class PanBlockEntity extends BlockEntity implements ImplementedInventory,
         }
 
         if (hasRecipe()) {
+            if (!state.get(PanBlock.COOKING)) {
+                world.setBlockState(pos, state.with(PanBlock.COOKING, true), Block.NOTIFY_ALL);
+            }
+
             maxProgress = recipe.get().value().cookTime();
             increaseCraftingProgress();
             markDirty(world, pos, state);
@@ -132,6 +138,9 @@ public class PanBlockEntity extends BlockEntity implements ImplementedInventory,
             }
         } else {
             resetProgress();
+            if (state.get(PanBlock.COOKING)) {
+                world.setBlockState(pos, state.with(PanBlock.COOKING, false), Block.NOTIFY_ALL);
+            }
         }
     }
 

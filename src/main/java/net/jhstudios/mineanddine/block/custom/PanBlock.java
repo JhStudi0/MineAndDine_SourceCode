@@ -10,12 +10,16 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -24,6 +28,7 @@ import org.jetbrains.annotations.Nullable;
 public class PanBlock extends BlockWithEntity implements BlockEntityProvider {
     VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 3, 15);
     public static final MapCodec<PanBlock> CODEC = PanBlock.createCodec(PanBlock::new);
+    public static final BooleanProperty COOKING = BooleanProperty.of("cooking");
 
     public PanBlock(Settings settings) {
         super(settings);
@@ -80,5 +85,31 @@ public class PanBlock extends BlockWithEntity implements BlockEntityProvider {
             return null;
         }
         return validateTicker(type, ModBlockEntities.PAN_BE, ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(COOKING);
+    }
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (!state.get(COOKING)) {
+            return;
+        }
+
+        double x = pos.getX() + 0.5;
+        double y = pos.getY() + 0.3;
+        double z = pos.getZ() + 0.5;
+
+        world.addParticle(
+                ParticleTypes.CAMPFIRE_COSY_SMOKE,
+                x + (random.nextDouble() - 0.5) * 0.3,
+                y,
+                z + (random.nextDouble() - 0.5) * 0.3,
+                0.0,
+                0.05,
+                0.0
+        );
     }
 }

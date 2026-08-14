@@ -1,6 +1,9 @@
 {
   "variants": {
-    "": {
+    "cooking=false": {
+      "model": "mineanddine:block/cooking_pot"
+    },
+    "cooking=true": {
       "model": "mineanddine:block/cooking_pot"
     }
   }
