@@ -10,11 +10,13 @@ import net.jhstudios.mineanddine.entity.ModEntities;
 import net.jhstudios.mineanddine.screen.ModScreenHandlers;
 import net.jhstudios.mineanddine.screen.custom.CookingPotScreen;
 import net.jhstudios.mineanddine.screen.custom.CornGrinderScreen;
+import net.jhstudios.mineanddine.screen.custom.MixerScreen;
 import net.jhstudios.mineanddine.screen.custom.PanScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
+import net.minecraft.util.Hand;
 
 public class MineAndDineClient implements ClientModInitializer {
     @Override
@@ -36,5 +38,7 @@ public class MineAndDineClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.CORN_GRINDER_SCREEN_HANDLER, CornGrinderScreen::new);
 
         HandledScreens.register(ModScreenHandlers.PAN_SCREEN_HANDLER, PanScreen::new);
+
+        HandledScreens.register(ModScreenHandlers.MIXER_SCREEN_HANLDER, MixerScreen::new);
     }
 }

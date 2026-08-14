@@ -1,7 +1,8 @@
-package net.jhstudios.mineanddine.recipe;
+package net.jhstudios.mineanddine.recipe.custom;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.jhstudios.mineanddine.recipe.ModRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;

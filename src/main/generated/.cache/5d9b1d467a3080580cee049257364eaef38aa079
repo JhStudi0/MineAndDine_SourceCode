@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-13T22:23:34.5024554	Mine and Dine/Recipes
+// 1.21.1	2026-08-14T00:13:32.8433161	Mine and Dine/Recipes
 2657a288733cf8095b2d17729d820a13e484828b data\mineanddine\advancement\recipes\food\corn_seeds.json
 703cf1b656683f37f842239b3fec430b75e45e02 data\mineanddine\advancement\recipes\food\bread_from_smelting_bread_dough.json
 41f946d3ed066f5c26cc22b3919ba55471e97e30 data\mineanddine\advancement\recipes\food\popcorn_from_smelting_corn_seeds.json
@@ -36,6 +36,7 @@ b35754568d61d021f079e56f8da3b9ecd7802106 data\mineanddine\recipe\tomato_sauce_fr
 c77f8eb9fdadf37c26e436b0e5372a5587370229 data\mineanddine\advancement\recipes\misc\stove.json
 534da512bc20afa6d1e432c23d9a2ce44720ccf8 data\mineanddine\recipe\flour_from_corn_grinder.json
 8753f421edd6bb77d47e37e9c0b5c9c1a31be292 data\mineanddine\recipe\ground_sunflower_seeds_from_corn_grinder.json
+720ce6a29c7b98ba099a546a9e34aac61090368c data\mineanddine\recipe\bread_dough_from_mixer.json
 499e62e183eae0b9b75d0a550b0299c8f6528c10 data\mineanddine\recipe\sushi_cod.json
 d9dd2a9b8445c7bd4f013bb80283ab969e169c3a data\mineanddine\recipe\counter.json
 9ac4240fd037db18c69a9b3f6d6cbe5e52f5ad41 data\mineanddine\recipe\stove.json

@@ -1,11 +1,10 @@
-package net.jhstudios.mineanddine.recipe;
+package net.jhstudios.mineanddine.recipe.custom;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.input.RecipeInput;
 import net.minecraft.util.collection.DefaultedList;
 
-public record CookingPotRecipeInput(DefaultedList<ItemStack> inventory) implements RecipeInput {
-
+public record PanRecipeInput(DefaultedList<ItemStack> inventory) implements RecipeInput {
     @Override
     public ItemStack getStackInSlot(int slot) {
         return inventory.get(slot);

@@ -134,6 +134,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.CORN_GRINDER);
 
+                        entries.add(ModBlocks.MIXER);
+
                         entries.add(ModBlocks.STOVE);
                         entries.add(ModBlocks.COUNTER);
 

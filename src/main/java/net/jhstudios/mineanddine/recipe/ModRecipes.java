@@ -1,7 +1,11 @@
 package net.jhstudios.mineanddine.recipe;
 
 import net.jhstudios.mineanddine.MineAndDine;
-import net.minecraft.recipe.Recipe;
+import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipe;
+import net.jhstudios.mineanddine.recipe.custom.CornGrinderRecipe;
+import net.jhstudios.mineanddine.recipe.custom.MixerRecipe;
+import net.jhstudios.mineanddine.recipe.custom.PanRecipe;
+import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.Registries;
@@ -36,6 +40,16 @@ public class ModRecipes {
             return "pan";
         }
     });
+
+    public static final RecipeSerializer<MixerRecipe> MIXER_SERIALIZER = Registry.register(Registries.RECIPE_SERIALIZER, Identifier.of(MineAndDine.MOD_ID, "mixer"), new MixerRecipe.Serializer());
+
+    public static final RecipeType<MixerRecipe> MIXER_TYPE = Registry.register(Registries.RECIPE_TYPE, Identifier.of(MineAndDine.MOD_ID, "pan"), new RecipeType<MixerRecipe>() {
+        @Override
+        public String toString() {
+            return "pan";
+        }
+    });
+
 
 
     public static void RegisterRecipes(){

@@ -1,27 +1,24 @@
 package net.jhstudios.mineanddine.datagen;
 
+import com.sun.jna.platform.unix.X11;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.CookingPotRecipeJsonBuilder;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.CornGrinderRecipeJsonBuilder;
+import net.jhstudios.mineanddine.datagen.customRecipeBuilders.MixerRecipeJsonBuilder;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.PanRecipeJsonBuilder;
 import net.jhstudios.mineanddine.item.ModItems;
-import net.jhstudios.mineanddine.recipe.PanRecipe;
-import net.jhstudios.mineanddine.util.ModTags;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
-import org.apache.commons.codec.language.bm.Rule;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -315,6 +312,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         PanRecipeJsonBuilder.create(Items.COOKED_SALMON, 300)
                 .input(Items.SALMON)
+                .offerTo(exporter);
+
+
+        MixerRecipeJsonBuilder.create(ModItems.BREAD_DOUGH, 200)
+                .input(ModItems.FLOUR)
+                .input(ModItems.FERMENTED_YEAST_JAR)
+                .input(Items.WATER_BUCKET)
+                .input(ModItems.SALT)
                 .offerTo(exporter);
     }
 

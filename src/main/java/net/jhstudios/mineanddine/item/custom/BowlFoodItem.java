@@ -40,4 +40,8 @@ public class BowlFoodItem extends Item {
         return result;
     }
 
+    @Override
+    public ItemStack getRecipeRemainder(ItemStack stack) {
+        return new ItemStack(Items.BOWL);
+    }
 }

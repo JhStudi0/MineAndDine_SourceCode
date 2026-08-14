@@ -1,10 +1,8 @@
-package net.jhstudios.mineanddine.recipe;
+package net.jhstudios.mineanddine.recipe.custom;
 
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.RecordBuilder;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.jhstudios.mineanddine.screen.custom.CornGrinderScreen;
-import net.minecraft.item.Item;
+import net.jhstudios.mineanddine.recipe.ModRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
@@ -12,7 +10,6 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
-import net.minecraft.recipe.book.RecipeBookCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;

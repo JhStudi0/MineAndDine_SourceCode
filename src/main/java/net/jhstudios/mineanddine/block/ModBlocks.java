@@ -96,13 +96,20 @@ public class ModBlocks {
             new CookingPotBlock(AbstractBlock.Settings.create()
                     .strength(2.5f)
                     .sounds(BlockSoundGroup.COPPER)
-                    .mapColor(MapColor.STONE_GRAY)
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
                     .nonOpaque()));
 
     public static final Block PAN = registerBlock("pan",
             new PanBlock(AbstractBlock.Settings.create()
                     .strength(2.5f)
                     .sounds(BlockSoundGroup.COPPER)
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .nonOpaque()));
+
+    public static final Block MIXER = registerBlock("mixer",
+            new MixerBlock(AbstractBlock.Settings.create()
+                    .strength(2.5f)
+                    .sounds(BlockSoundGroup.STONE)
                     .mapColor(MapColor.STONE_GRAY)
                     .nonOpaque()));
 

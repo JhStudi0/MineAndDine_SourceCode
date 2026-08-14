@@ -1,0 +1,21 @@
+{
+  "type": "mineanddine:mixer",
+  "ingredients": [
+    {
+      "item": "mineanddine:flour"
+    },
+    {
+      "item": "mineanddine:fermented_yeast_jar"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "mineanddine:salt"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:bread_dough"
+  }
+}

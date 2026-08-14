@@ -2,11 +2,8 @@ package net.jhstudios.mineanddine.block.entity;
 
 import net.jhstudios.mineanddine.MineAndDine;
 import net.jhstudios.mineanddine.block.ModBlocks;
-import net.jhstudios.mineanddine.block.entity.custom.CookingPotBlockEntity;
+import net.jhstudios.mineanddine.block.entity.custom.*;
 
-import net.jhstudios.mineanddine.block.entity.custom.CornGrinderBlockEntity;
-import net.jhstudios.mineanddine.block.entity.custom.PanBlockEntity;
-import net.jhstudios.mineanddine.block.entity.custom.PlateBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
@@ -32,6 +29,9 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(MineAndDine.MOD_ID, "pan_be"),
                     BlockEntityType.Builder.create(PanBlockEntity::new, ModBlocks.PAN).build());
 
+    public static final BlockEntityType<MixerBlockEntity> MIXER_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(MineAndDine.MOD_ID, "mixer_be"),
+                    BlockEntityType.Builder.create(MixerBlockEntity::new, ModBlocks.MIXER).build());
 
 
 

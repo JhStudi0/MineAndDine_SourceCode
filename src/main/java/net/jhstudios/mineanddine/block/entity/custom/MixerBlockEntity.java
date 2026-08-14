@@ -3,14 +3,11 @@ package net.jhstudios.mineanddine.block.entity.custom;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.jhstudios.mineanddine.block.entity.ImplementedInventory;
 import net.jhstudios.mineanddine.block.entity.ModBlockEntities;
-import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipe;
-import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipeInput;
 import net.jhstudios.mineanddine.recipe.ModRecipes;
-import net.jhstudios.mineanddine.screen.custom.CookingPotScreenHandler;
-import net.jhstudios.mineanddine.util.ModTags;
-import net.minecraft.block.AbstractFurnaceBlock;
+import net.jhstudios.mineanddine.recipe.custom.MixerRecipe;
+import net.jhstudios.mineanddine.recipe.custom.MixerRecipeInput;
+import net.jhstudios.mineanddine.screen.custom.MixerScreenHandler;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -33,8 +30,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class CookingPotBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
-    public final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(8, ItemStack.EMPTY);
+public class MixerBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
+    public final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
 
     private static final int INPUT_SLOT1 = 0;
     private static final int INPUT_SLOT2 = 1;
@@ -42,23 +39,26 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
     private static final int INPUT_SLOT4 = 3;
     private static final int INPUT_SLOT5 = 4;
     private static final int INPUT_SLOT6 = 5;
-    private static final int OUTPUT_SLOT = 6;
-    private static final int CONTAINER_SLOT = 7;
+    private static final int INPUT_SLOT7 = 6;
+    private static final int INPUT_SLOT8 = 7;
+    private static final int INPUT_SLOT9 = 8;
+    private static final int OUTPUT_SLOT = 9;
+
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 150;
 
 
-    public CookingPotBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.COOKING_POT_BE, pos, state);
+    public MixerBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.MIXER_BE, pos, state);
 
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> CookingPotBlockEntity.this.progress;
-                    case 1 -> CookingPotBlockEntity.this.maxProgress;
+                    case 0 -> MixerBlockEntity.this.progress;
+                    case 1 -> MixerBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -66,8 +66,10 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0: CookingPotBlockEntity.this.progress = value;
-                    case 1: CookingPotBlockEntity.this.maxProgress = value;
+                    case 0:
+                        MixerBlockEntity.this.progress = value;
+                    case 1:
+                        MixerBlockEntity.this.maxProgress = value;
                 }
             }
 
@@ -90,37 +92,34 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
 
     @Override
     public Text getDisplayName() {
-        return Text.translatable("block.mineanddine.cooking_pot");
+        return Text.translatable("block.mineanddine.mixer");
     }
 
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new CookingPotScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
+        return new MixerScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 
     @Override
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.writeNbt(nbt, registryLookup);
         Inventories.writeNbt(nbt, inventory, registryLookup);
-        nbt.putInt("cooking_pot.progress", progress);
-        nbt.putInt("cooking_pot.max_progress", maxProgress);
+        nbt.putInt("mixer.progress", progress);
+        nbt.putInt("mixer.max_progress", maxProgress);
     }
 
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        Inventories.readNbt(nbt,inventory, registryLookup);
-        progress = nbt.getInt("cooking_pot.progress");
-        maxProgress = nbt.getInt("cooking_pot.max_progress");
+        Inventories.readNbt(nbt, inventory, registryLookup);
+        progress = nbt.getInt("mixer.progress");
+        maxProgress = nbt.getInt("mixer.max_progress");
         super.readNbt(nbt, registryLookup);
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
-        Optional<RecipeEntry<CookingPotRecipe>> recipe = getCurrentRecipe();
-        if (!hasFire()){
-            resetProgress();
-            return;
-        }
+        Optional<RecipeEntry<MixerRecipe>> recipe = getCurrentRecipe();
+
 
         if (hasRecipe()) {
             maxProgress = recipe.get().value().cookTime();
@@ -137,11 +136,7 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
 
     }
 
-    private boolean hasFire() {
-        BlockState below = world.getBlockState(getPos().down());
 
-         return below.isIn(ModTags.Blocks.WARM_BLOCKS) || (below.isOf(Blocks.FURNACE) && below.get(AbstractFurnaceBlock.LIT)) || (below.isOf(Blocks.SMOKER) && below.get(AbstractFurnaceBlock.LIT)) || (below.isOf(Blocks.BLAST_FURNACE) && below.get(AbstractFurnaceBlock.LIT));
-    }
 
     private void resetProgress() {
         this.progress = 0;
@@ -149,15 +144,15 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
     }
 
     private void craftItem() {
-        Optional<RecipeEntry<CookingPotRecipe>> recipe = getCurrentRecipe();
+        Optional<RecipeEntry<MixerRecipe>> recipe = getCurrentRecipe();
 
-        if (recipe.isEmpty()){
+        if (recipe.isEmpty()) {
             return;
         }
 
-        CookingPotRecipe cookingPotRecipe = recipe.get().value();
+        MixerRecipe mixerRecipe = recipe.get().value();
 
-        for (int i = 0; i < 6; i++){
+        for (int i = 0; i < 9; i++) {
             consumeIngredients(i);
         }
         consumeIngredients(7);
@@ -176,7 +171,7 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
 
         ItemStack remainder = stack.getRecipeRemainder();
 
-        if (!remainder.isEmpty()){
+        if (!remainder.isEmpty()) {
             setStack(slot, remainder);
         } else {
             stack.decrement(1);
@@ -196,29 +191,29 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
     }
 
     private boolean hasRecipe() {
-        Optional<RecipeEntry<CookingPotRecipe>> recipe = getCurrentRecipe();
-        if (recipe.isEmpty()){
+        Optional<RecipeEntry<MixerRecipe>> recipe = getCurrentRecipe();
+        if (recipe.isEmpty()) {
             return false;
         }
 
         ItemStack output = recipe.get().value().output();
 
-        return recipe.get().value().container().test(getStack(CONTAINER_SLOT)) && canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
 
-    private Optional<RecipeEntry<CookingPotRecipe>> getCurrentRecipe() {
-        if (world == null){
+    private Optional<RecipeEntry<MixerRecipe>> getCurrentRecipe() {
+        if (world == null) {
             return Optional.empty();
         }
-        DefaultedList<ItemStack> inputs = DefaultedList.ofSize(6, ItemStack.EMPTY);
+        DefaultedList<ItemStack> inputs = DefaultedList.ofSize(9, ItemStack.EMPTY);
 
-        for (int i = 0; i < 6; i++){
+        for (int i = 0; i < 9; i++) {
             inputs.set(i, inventory.get(i));
         }
 
-        CookingPotRecipeInput input = new CookingPotRecipeInput(inputs);
+        MixerRecipeInput input = new MixerRecipeInput(inputs);
 
-        return world.getRecipeManager().getFirstMatch(ModRecipes.COOKING_POT_TYPE, input, world);
+        return world.getRecipeManager().getFirstMatch(ModRecipes.MIXER_TYPE, input, world);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

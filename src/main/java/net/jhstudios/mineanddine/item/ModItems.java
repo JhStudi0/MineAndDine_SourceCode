@@ -113,7 +113,8 @@ public class ModItems {
 
     public static final Item YEAST_JAR = registerItem("yeast_jar", new BlockItem(ModBlocks.YEAST_JAR, new Item.Settings()));
 
-    public static final Item FERMENTED_YEAST_JAR = registerItem("fermented_yeast_jar", new JarFoodItem(new Item.Settings()));
+    public static final Item FERMENTED_YEAST_JAR = registerItem("fermented_yeast_jar", new JarFoodItem(new Item.Settings()
+            .maxCount(1)));
 
     public static final Item BREAD_DOUGH = registerItem("bread_dough", new JarFoodItem(new Item.Settings()
             .food(ModFoodComponents.BREAD_DOUGH)));

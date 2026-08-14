@@ -1,13 +1,11 @@
 package net.jhstudios.mineanddine.block.entity.custom;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
-import net.jhstudios.mineanddine.block.custom.PanBlock;
 import net.jhstudios.mineanddine.block.entity.ImplementedInventory;
 import net.jhstudios.mineanddine.block.entity.ModBlockEntities;
-import net.jhstudios.mineanddine.recipe.CookingPotRecipeInput;
+import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipeInput;
 import net.jhstudios.mineanddine.recipe.ModRecipes;
-import net.jhstudios.mineanddine.recipe.PanRecipe;
-import net.jhstudios.mineanddine.recipe.PanRecipeInput;
+import net.jhstudios.mineanddine.recipe.custom.PanRecipe;
 import net.jhstudios.mineanddine.screen.custom.PanScreenHandler;
 import net.jhstudios.mineanddine.util.ModTags;
 import net.minecraft.block.AbstractFurnaceBlock;
@@ -17,7 +15,6 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;

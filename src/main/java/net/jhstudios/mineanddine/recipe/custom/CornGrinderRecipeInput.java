@@ -1,4 +1,4 @@
-package net.jhstudios.mineanddine.recipe;
+package net.jhstudios.mineanddine.recipe.custom;
 
 
 import com.sun.jna.platform.unix.X11;

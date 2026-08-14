@@ -1,6 +1,6 @@
 package net.jhstudios.mineanddine.datagen.customRecipeBuilders;
 
-import net.jhstudios.mineanddine.recipe.CornGrinderRecipe;
+import net.jhstudios.mineanddine.recipe.custom.CornGrinderRecipe;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

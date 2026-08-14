@@ -1,8 +1,10 @@
-package net.jhstudios.mineanddine.recipe;
+package net.jhstudios.mineanddine.recipe.custom;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.item.Item;
+import net.jhstudios.mineanddine.recipe.ModRecipes;
+import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipe;
+import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipeInput;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
@@ -14,17 +16,15 @@ import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.spi.CopyOnWrite;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public record CookingPotRecipe(DefaultedList<Ingredient> ingredients, Ingredient container, ItemStack output, int cookTime) implements Recipe<CookingPotRecipeInput> {
-
+public record MixerRecipe(DefaultedList<Ingredient> ingredients, ItemStack output, int cookTime) implements Recipe<MixerRecipeInput> {
 
     @Override
-    public boolean matches(CookingPotRecipeInput input, World world) {
+    public boolean matches(MixerRecipeInput input, World world) {
         List<ItemStack> remaining = new ArrayList<>();
 
         for (int i = 0; i < input.getSize(); i++) {
@@ -61,7 +61,7 @@ public record CookingPotRecipe(DefaultedList<Ingredient> ingredients, Ingredient
     }
 
     @Override
-    public ItemStack craft(CookingPotRecipeInput input, RegistryWrapper.WrapperLookup lookup) {
+    public ItemStack craft(MixerRecipeInput input, RegistryWrapper.WrapperLookup lookup) {
         return output.copy();
     }
 
@@ -77,44 +77,43 @@ public record CookingPotRecipe(DefaultedList<Ingredient> ingredients, Ingredient
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipes.COOKING_POT_SERIALIZER;
+        return ModRecipes.MIXER_SERIALIZER;
     }
 
     @Override
     public RecipeType<?> getType() {
-        return ModRecipes.COOKING_POT_TYPE;
+        return ModRecipes.MIXER_TYPE;
     }
 
 
-    public static class Serializer implements RecipeSerializer<CookingPotRecipe> {
+    public static class Serializer implements RecipeSerializer<MixerRecipe> {
 
-        public static final MapCodec<CookingPotRecipe> CODEC =
+        public static final MapCodec<MixerRecipe> CODEC =
                 RecordCodecBuilder.mapCodec(instance -> instance.group(
-                        Ingredient.DISALLOW_EMPTY_CODEC.listOf().fieldOf("ingredients").forGetter(CookingPotRecipe::ingredients),
-                        Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("container").forGetter(CookingPotRecipe::container),
-                        ItemStack.VALIDATED_CODEC.fieldOf("result").forGetter(CookingPotRecipe::output),
-                        com.mojang.serialization.Codec.INT.optionalFieldOf("cook_time", 200).forGetter(CookingPotRecipe::cookTime)
-                ).apply(instance, (ingredients, container, result, cookTime) -> new CookingPotRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), container, result, cookTime)));
+                        Ingredient.DISALLOW_EMPTY_CODEC.listOf().fieldOf("ingredients").forGetter(MixerRecipe::ingredients),
+                        ItemStack.VALIDATED_CODEC.fieldOf("result").forGetter(MixerRecipe::output),
+                        com.mojang.serialization.Codec.INT.optionalFieldOf("cook_time", 200).forGetter(MixerRecipe::cookTime)
+                ).apply(instance, (ingredients, result, cookTime) -> new MixerRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), result, cookTime)));
 
 
 
-        public static final PacketCodec<RegistryByteBuf, CookingPotRecipe> STREAM_CODEC = PacketCodec.tuple(
+        public static final PacketCodec<RegistryByteBuf, MixerRecipe> STREAM_CODEC = PacketCodec.tuple(
                 Ingredient.PACKET_CODEC.collect(PacketCodecs.toList()),
                 recipe -> new ArrayList<>(recipe.ingredients()),
-                Ingredient.PACKET_CODEC, CookingPotRecipe::container,
-                ItemStack.PACKET_CODEC, CookingPotRecipe::output,
-                PacketCodecs.INTEGER, CookingPotRecipe::cookTime,
-                ((ingredients,container, result, cookTime) -> new CookingPotRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), container, result, cookTime)));
+                ItemStack.PACKET_CODEC, MixerRecipe::output,
+                PacketCodecs.INTEGER, MixerRecipe::cookTime,
+                ((ingredients, result, cookTime) -> new MixerRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), result, cookTime)));
 
 
         @Override
-        public MapCodec<CookingPotRecipe> codec() {
+        public MapCodec<MixerRecipe> codec() {
             return CODEC;
         }
 
         @Override
-        public PacketCodec<RegistryByteBuf, CookingPotRecipe> packetCodec() {
+        public PacketCodec<RegistryByteBuf, MixerRecipe> packetCodec() {
             return STREAM_CODEC;
         }
     }
 }
+
