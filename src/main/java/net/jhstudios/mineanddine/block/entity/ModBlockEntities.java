@@ -33,6 +33,10 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(MineAndDine.MOD_ID, "mixer_be"),
                     BlockEntityType.Builder.create(MixerBlockEntity::new, ModBlocks.MIXER).build());
 
+    public static final BlockEntityType<CuttingBoardBlockEntity> CUTTING_BOARD_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(MineAndDine.MOD_ID, "cutting_board_be"),
+                    BlockEntityType.Builder.create(CuttingBoardBlockEntity::new, ModBlocks.CUTTING_BOARD).build());
+
 
 
 

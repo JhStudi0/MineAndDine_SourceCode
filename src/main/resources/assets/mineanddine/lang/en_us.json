@@ -63,6 +63,8 @@
 
   "item.mineanddine.cream": "Cream",
 
+  "item.mineanddine.knife": "Knife",
+
   "itemgroup.mineanddine.mine_and_dine_seeds": "Mine and Dine Seeds",
   "itemgroup.mineanddine.mine_and_dine_ingredients": "Mine and Dine Ingredients",
   "itemgroup.mineanddine.mine_and_dine_dishes": "Mine and Dine Dishes",
@@ -76,6 +78,7 @@
   "block.mineanddine.counter": "Counter",
   "block.mineanddine.pan": "Frying Pan",
   "block.mineanddine.mixer": "Mixer",
+  "block.mineanddine.cutting_board": "Cutting Board",
 
   "entity.mineanddine.rock": "rock"
 }

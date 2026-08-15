@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-14T00:13:32.8433161	Mine and Dine/Recipes
+// 1.21.1	2026-08-15T18:24:53.2818687	Mine and Dine/Recipes
 2657a288733cf8095b2d17729d820a13e484828b data\mineanddine\advancement\recipes\food\corn_seeds.json
 703cf1b656683f37f842239b3fec430b75e45e02 data\mineanddine\advancement\recipes\food\bread_from_smelting_bread_dough.json
 41f946d3ed066f5c26cc22b3919ba55471e97e30 data\mineanddine\advancement\recipes\food\popcorn_from_smelting_corn_seeds.json
@@ -8,6 +8,7 @@ d9d8491776a877020f13f37a7d490c7a4f791c8f data\mineanddine\recipe\cooked_cod_from
 f8479567e6136f911ed9aa61bda11b8ee8ae60e6 data\mineanddine\recipe\cooked_chicken_from_pan.json
 51b0b75a1e1e747fbe69bc87b87a82bf05cca4d8 data\mineanddine\advancement\recipes\misc\pan.json
 b3cff01d9d8250ad7c5ba8cf27216db0778e13de data\mineanddine\advancement\recipes\food\milk_chocolate.json
+f0cba927f096991ccadf3f44f96f68b6766aa29e data\mineanddine\recipe\chicken_leg_from_cutting_board.json
 321edcd6500878dd8e36565c85e8347d4b3dc3fd data\mineanddine\advancement\recipes\food\sushi_salmon.json
 4eaac9b77a20be1a03dfcb1e646d8d49a0f5ae97 data\mineanddine\recipe\poppy_seeds.json
 cfed98622ec4bd5851b97497861f476b1e945726 data\mineanddine\recipe\white_chocolate.json

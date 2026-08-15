@@ -12,9 +12,11 @@ import javax.swing.text.html.HTML;
 
 public class ModTags {
     public static class Blocks {
+
         public static final TagKey<Block> WARM_BLOCKS = createTag("warm_blocks");
 
         public static final TagKey<Block> NUTRITIONAL_BLOCKS = createTag("nutritional_blocks");
+
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(MineAndDine.MOD_ID, name));
@@ -22,7 +24,9 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
+
+        public static final TagKey<Item> KNIVES = createTag("knives");
+
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(MineAndDine.MOD_ID, name));

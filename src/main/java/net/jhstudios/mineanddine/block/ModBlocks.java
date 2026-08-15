@@ -127,6 +127,12 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE_GRAY)
                     .nonOpaque()));
 
+    public static final Block CUTTING_BOARD = registerBlock("cutting_board",
+            new CuttingBoardBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .mapColor(MapColor.BROWN)));
+
     public static final Block STOVE = registerBlock("stove",
             new StoveBlock(AbstractBlock.Settings.create()
                     .strength(3.5f, 6.0f)

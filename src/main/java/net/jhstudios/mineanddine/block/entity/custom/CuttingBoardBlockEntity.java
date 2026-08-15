@@ -2,6 +2,7 @@ package net.jhstudios.mineanddine.block.entity.custom;
 
 import net.jhstudios.mineanddine.block.entity.ImplementedInventory;
 import net.jhstudios.mineanddine.block.entity.ModBlockEntities;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -14,18 +15,39 @@ import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
-import org.jetbrains.annotations.Nullable;
 
-public class PlateBlockEntity extends BlockEntity implements ImplementedInventory {
+public class CuttingBoardBlockEntity extends BlockEntity implements ImplementedInventory {
+
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
-
-    public PlateBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.PLATE_BE, pos, state);
+    public CuttingBoardBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.CUTTING_BOARD_BE, pos, state);
     }
 
     @Override
     public DefaultedList<ItemStack> getItems() {
         return inventory;
+    }
+
+    public ItemStack getItem() {
+        return inventory.get(0);
+    }
+
+    public void setItem(ItemStack stack) {
+        inventory.set(0, stack);
+        markDirty();
+
+        if (world != null && !world.isClient) {
+            world.updateListeners(pos, getCachedState(), getCachedState(), Block.NOTIFY_ALL);
+        }
+    }
+
+    public void clearItem() {
+        inventory.set(0, ItemStack.EMPTY);
+        markDirty();
+
+        if (world != null && !world.isClient) {
+            world.updateListeners(pos, getCachedState(), getCachedState(), Block.NOTIFY_ALL);
+        }
     }
 
     @Override
@@ -37,10 +59,11 @@ public class PlateBlockEntity extends BlockEntity implements ImplementedInventor
     @Override
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.readNbt(nbt, registryLookup);
+
+        inventory.set(0, ItemStack.EMPTY);
         Inventories.readNbt(nbt, inventory, registryLookup);
     }
 
-    @Nullable
     @Override
     public Packet<ClientPlayPacketListener> toUpdatePacket() {
         return BlockEntityUpdateS2CPacket.create(this);

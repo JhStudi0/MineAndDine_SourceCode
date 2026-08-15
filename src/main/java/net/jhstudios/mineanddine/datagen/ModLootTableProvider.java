@@ -90,6 +90,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.CORN_GRINDER);
 
+        addDrop(ModBlocks.PAN);
+
+        addDrop(ModBlocks.STOVE);
+
+        addDrop(ModBlocks.COUNTER);
+
+        addDrop(ModBlocks.CUTTING_BOARD);
+
+        addDrop(ModBlocks.MIXER);
+
 
 
 

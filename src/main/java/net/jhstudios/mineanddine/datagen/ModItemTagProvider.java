@@ -18,5 +18,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ItemTags.MEAT)
                 .add(ModItems.CHICKEN_LEG);
+
+        getOrCreateTagBuilder(ModTags.Items.KNIVES)
+                .add(ModItems.KNIFE);
     }
 }

@@ -63,6 +63,8 @@
 
   "item.mineanddine.carrot_soup": "Karottensuppe",
 
+  "item.mineanddine.knife": "Messer",
+
   "itemgroup.mineanddine.mine_and_dine_seeds": "Mine and Dine Samen",
   "itemgroup.mineanddine.mine_and_dine_ingredients": "Mine and Dine Zutaten",
   "itemgroup.mineanddine.mine_and_dine_dishes": "Mine and Dine Mahlzeiten",
@@ -76,6 +78,7 @@
   "block.mineanddine.counter": "Arbeitsfläche",
   "block.mineanddine.pan": "Pfanne",
   "block.mineanddine.mixer": "Mixer",
+  "block.mineanddine.cutting_board": "Schneidebrett",
 
   "entity.mineanddine.rock": "Kieselstein"
 }

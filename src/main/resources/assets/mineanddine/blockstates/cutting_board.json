@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "mineanddine:block/cutting_board" },
+    "facing=east":  { "model": "mineanddine:block/cutting_board", "y": 90 },
+    "facing=south": { "model": "mineanddine:block/cutting_board", "y": 180 },
+    "facing=west":  { "model": "mineanddine:block/cutting_board", "y": 270 }
+  }
+}

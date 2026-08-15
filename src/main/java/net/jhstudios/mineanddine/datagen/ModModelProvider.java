@@ -65,5 +65,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SUNFLOWER_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.GROUND_SUNFLOWER_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.SUNFLOWER_OIL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KNIFE, Models.GENERATED);
     }
 }

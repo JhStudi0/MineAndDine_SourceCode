@@ -5,6 +5,7 @@ import net.jhstudios.mineanddine.MineAndDine;
 import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.item.custom.BowlFoodItem;
 import net.jhstudios.mineanddine.item.custom.JarFoodItem;
+import net.jhstudios.mineanddine.item.custom.KnifeItem;
 import net.jhstudios.mineanddine.item.custom.RockItem;
 import net.jhstudios.mineanddine.util.ModTags;
 import net.minecraft.block.Block;
@@ -140,6 +141,7 @@ public class ModItems {
             .food(ModFoodComponents.ONION)));
 
     public static final Item VEGETABLE_STOCK = registerItem("vegetable_stock", new Item(new Item.Settings()
+            .maxCount(1)
             .food(ModFoodComponents.STOCK)));
 
     public static final Item CREAM = registerItem("cream", new Item(new Item.Settings()
@@ -148,6 +150,10 @@ public class ModItems {
     public static final Item GARLIC = registerItem("garlic", new Item(new Item.Settings()
             .food(ModFoodComponents.GARLIC)));
 
+
+    public static final Item KNIFE = registerItem("knife", new KnifeItem(new Item.Settings()
+            .maxCount(1)
+            .maxDamage(250)));
 
 
 

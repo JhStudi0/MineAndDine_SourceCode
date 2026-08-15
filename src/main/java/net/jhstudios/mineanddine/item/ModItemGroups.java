@@ -136,6 +136,9 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.MIXER);
 
+                        entries.add(ModItems.KNIFE);
+                        entries.add(ModBlocks.CUTTING_BOARD);
+
                         entries.add(ModBlocks.STOVE);
                         entries.add(ModBlocks.COUNTER);
 

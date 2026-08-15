@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.block.entity.ModBlockEntities;
+import net.jhstudios.mineanddine.block.entity.renderer.CuttingBoardRenderer;
 import net.jhstudios.mineanddine.block.entity.renderer.PlateBlockRenderer;
 import net.jhstudios.mineanddine.entity.ModEntities;
 import net.jhstudios.mineanddine.screen.ModScreenHandlers;
@@ -31,14 +32,12 @@ public class MineAndDineClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.ROCK, FlyingItemEntityRenderer::new);
 
-        HandledScreens.register(ModScreenHandlers.COOKING_POT_SCREEN_HANDLER, CookingPotScreen::new);
-
         BlockEntityRendererFactories.register(ModBlockEntities.PLATE_BE, PlateBlockRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.CUTTING_BOARD_BE, CuttingBoardRenderer::new);
 
+        HandledScreens.register(ModScreenHandlers.COOKING_POT_SCREEN_HANDLER, CookingPotScreen::new);
         HandledScreens.register(ModScreenHandlers.CORN_GRINDER_SCREEN_HANDLER, CornGrinderScreen::new);
-
         HandledScreens.register(ModScreenHandlers.PAN_SCREEN_HANDLER, PanScreen::new);
-
         HandledScreens.register(ModScreenHandlers.MIXER_SCREEN_HANLDER, MixerScreen::new);
     }
 }
