@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:pan",
+  "cook_time": 100,
+  "ingredients": [
+    {
+      "item": "mineanddine:raw_tortilla"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:tortilla"
+  }
+}
