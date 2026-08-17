@@ -3,10 +3,7 @@ package net.jhstudios.mineanddine.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jhstudios.mineanddine.MineAndDine;
 import net.jhstudios.mineanddine.block.ModBlocks;
-import net.jhstudios.mineanddine.item.custom.BowlFoodItem;
-import net.jhstudios.mineanddine.item.custom.JarFoodItem;
-import net.jhstudios.mineanddine.item.custom.KnifeItem;
-import net.jhstudios.mineanddine.item.custom.RockItem;
+import net.jhstudios.mineanddine.item.custom.*;
 import net.jhstudios.mineanddine.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -159,9 +156,23 @@ public class ModItems {
     public static final Item BUN = registerItem("bun", new Item(new Item.Settings()
             .food(FoodComponents.BREAD)));
 
+    public static final Item TORTILLA_DOUGH = registerItem("tortilla_dough", new Item(new Item.Settings()
+            .food(ModFoodComponents.BREAD_DOUGH)));
+
+    public static final Item RAW_TORTILLA = registerItem("raw_tortilla", new Item(new Item.Settings()
+            .food(ModFoodComponents.BREAD_DOUGH)));
+
+    public static final Item TORTILLA = registerItem("tortilla", new Item(new Item.Settings()
+            .food(ModFoodComponents.TORTILLA)));
+
     public static final Item KNIFE = registerItem("knife", new KnifeItem(new Item.Settings()
             .maxCount(1)
             .maxDamage(250)));
+
+    public static final Item ROLLING_PIN = registerItem("rolling_pin", new RollingPinItem(new Item.Settings()
+            .maxCount(1)
+            .maxDamage(300)));
+
 
 
 

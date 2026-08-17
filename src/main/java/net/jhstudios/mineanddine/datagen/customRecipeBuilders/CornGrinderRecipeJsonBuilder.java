@@ -12,15 +12,24 @@ public class CornGrinderRecipeJsonBuilder {
 
     private final Item input;
     private final Item output;
+    private final int count;
 
-    private CornGrinderRecipeJsonBuilder(Item input, Item output) {
+
+
+    private CornGrinderRecipeJsonBuilder(Item input, Item output, int count) {
         this.input = input;
         this.output = output;
+        this.count = count;
+    }
+
+    public static CornGrinderRecipeJsonBuilder create(Item input, Item output, int count) {
+        return new CornGrinderRecipeJsonBuilder(input, output, count);
     }
 
     public static CornGrinderRecipeJsonBuilder create(Item input, Item output) {
-        return new CornGrinderRecipeJsonBuilder(input, output);
+        return new CornGrinderRecipeJsonBuilder(input, output, 1);
     }
+
 
     public void offerTo(RecipeExporter exporter) {
 
@@ -28,7 +37,7 @@ public class CornGrinderRecipeJsonBuilder {
 
         CornGrinderRecipe recipe = new CornGrinderRecipe(
                 Ingredient.ofItems(input),
-                new ItemStack(output)
+                new ItemStack(output, count)
         );
 
         Identifier recipeId = Identifier.of(

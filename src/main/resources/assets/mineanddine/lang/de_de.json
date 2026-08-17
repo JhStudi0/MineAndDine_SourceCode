@@ -58,6 +58,9 @@
   "item.mineanddine.bread_dough": "Brotteig",
   "item.mineanddine.bun_dough": "Brötchenteig",
   "item.mineanddine.bun": "Brötchen",
+  "item.mineanddine.tortilla_dough": "Tortillateig",
+  "item.mineanddine.raw_tortilla": "Roher Tortilla",
+  "item.mineanddine.tortilla": "Tortilla",
 
   "item.mineanddine.cookie_dough": "Keksteig",
 
@@ -68,6 +71,7 @@
   "item.mineanddine.carrot_soup": "Karottensuppe",
 
   "item.mineanddine.knife": "Messer",
+  "item.mineanddine.rolling_pin": "Nudelholz",
 
   "itemgroup.mineanddine.mine_and_dine_seeds": "Mine and Dine Samen",
   "itemgroup.mineanddine.mine_and_dine_ingredients": "Mine and Dine Zutaten",

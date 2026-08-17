@@ -57,12 +57,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.TOMATO), conditionsFromItem(ModItems.TOMATO))
                 .offerTo(exporter);
 
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROCK, 4)
-                .input(Items.COBBLESTONE)
-                .criterion(hasItem(Items.COBBLESTONE), conditionsFromItem(Items.COBBLESTONE))
-                .offerTo(exporter);
-
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.VANILLA_SEEDS, 1)
                 .input(ModItems.VANILLA_BEAN)
                 .criterion(hasItem(ModItems.VANILLA_BEAN), conditionsFromItem(ModItems.VANILLA_BEAN))
@@ -233,6 +227,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ROLLING_PIN)
+                .pattern("SPS")
+                .input('S', Items.STICK)
+                .input('P', ItemTags.PLANKS)
+                .criterion("has Plank", conditionsFromTag(ItemTags.PLANKS))
+                .offerTo(exporter);
+
 
 
         CornGrinderRecipeJsonBuilder.create(Items.WHEAT, ModItems.FLOUR).offerTo(exporter);
@@ -240,6 +241,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         CornGrinderRecipeJsonBuilder.create(Items.SUGAR_CANE, Items.SUGAR).offerTo(exporter);
 
         CornGrinderRecipeJsonBuilder.create(ModItems.SUNFLOWER_SEEDS, ModItems.GROUND_SUNFLOWER_SEEDS).offerTo(exporter);
+
+        CornGrinderRecipeJsonBuilder.create(Items.COBBLESTONE, ModItems.ROCK, 4).offerTo(exporter);
 
 
 
@@ -323,6 +326,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.SALMON)
                 .offerTo(exporter);
 
+        PanRecipeJsonBuilder.create(ModItems.TORTILLA, 100)
+                .input(ModItems.RAW_TORTILLA)
+                .offerTo(exporter);
+
 
 
         MixerRecipeJsonBuilder.create(ModItems.BREAD_DOUGH, 200)
@@ -332,7 +339,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.SALT)
                 .offerTo(exporter);
 
-        MixerRecipeJsonBuilder.create(ModItems.COOKIE_DOUGH, 200)
+        MixerRecipeJsonBuilder.create(ModItems.COOKIE_DOUGH,3,  200)
                 .input(ModItems.BUTTER)
                 .input(Items.SUGAR)
                 .input(Items.EGG, 1)
@@ -346,6 +353,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.BUTTER)
                 .offerTo(exporter);
 
+        MixerRecipeJsonBuilder.create(ModItems.TORTILLA_DOUGH, 200)
+                .input(Items.WATER_BUCKET)
+                .input(ModItems.FLOUR)
+                .offerTo(exporter);
+
 
 
         CuttingBoardRecipeJsonBuilder.create(Items.CHICKEN, ModItems.CHICKEN_LEG)
@@ -356,6 +368,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         CuttingBoardRecipeJsonBuilder.create(ModItems.BREAD_DOUGH, ModItems.BUN_DOUGH)
                 .tool(ModItems.KNIFE)
                 .outputCount(4)
+                .offerTo(exporter);
+
+        CuttingBoardRecipeJsonBuilder.create(ModItems.TORTILLA_DOUGH, ModItems.RAW_TORTILLA)
+                .tool(ModItems.ROLLING_PIN)
+                .outputCount(3)
                 .offerTo(exporter);
     }
 

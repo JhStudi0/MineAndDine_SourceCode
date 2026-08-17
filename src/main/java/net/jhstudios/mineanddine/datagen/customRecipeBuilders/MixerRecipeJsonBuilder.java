@@ -15,15 +15,21 @@ import net.minecraft.util.collection.DefaultedList;
 public class MixerRecipeJsonBuilder {
     private final Item output;
     private final DefaultedList<Ingredient> inputs = DefaultedList.of();
+    private final int count;
     private final int cook_time;
 
-    private MixerRecipeJsonBuilder(Item output, int cook_time) {
+    private MixerRecipeJsonBuilder(Item output, int count, int cook_time) {
         this.output = output;
         this.cook_time = cook_time;
+        this.count = count;
+    }
+
+    public static MixerRecipeJsonBuilder create(Item output, int count, int cook_time) {
+        return new MixerRecipeJsonBuilder(output, count, cook_time);
     }
 
     public static MixerRecipeJsonBuilder create(Item output, int cook_time) {
-        return new MixerRecipeJsonBuilder(output, cook_time);
+        return new MixerRecipeJsonBuilder(output, 1, cook_time);
     }
 
     public MixerRecipeJsonBuilder input(TagKey<Item> tag) {
@@ -58,7 +64,7 @@ public class MixerRecipeJsonBuilder {
 
         Identifier outputId = Registries.ITEM.getId(output);
 
-        MixerRecipe recipe = new MixerRecipe(this.inputs, new ItemStack(output), this.cook_time);
+        MixerRecipe recipe = new MixerRecipe(this.inputs, new ItemStack(output, count), this.cook_time);
 
         Identifier recipeId = Identifier.of(
                 "mineanddine",

@@ -70,5 +70,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BUN, Models.GENERATED);
         itemModelGenerator.register(ModItems.BUN_DOUGH, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKIE_DOUGH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROLLING_PIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TORTILLA_DOUGH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_TORTILLA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TORTILLA, Models.GENERATED);
     }
 }

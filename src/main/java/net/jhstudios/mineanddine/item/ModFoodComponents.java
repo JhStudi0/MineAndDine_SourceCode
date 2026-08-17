@@ -43,6 +43,8 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 1),0.25f)
             .build();
 
+    public static final FoodComponent TORTILLA = new FoodComponent.Builder().nutrition(3).saturationModifier(0.3F).build();
+
     public static final FoodComponent COOKIE_DOUGH = new FoodComponent.Builder().nutrition(4).saturationModifier(0.4f).build();
 
     public static final FoodComponent SUSHI = new FoodComponent.Builder().nutrition(5).saturationModifier(2f)

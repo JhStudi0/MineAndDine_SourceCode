@@ -60,6 +60,9 @@
   "item.mineanddine.bread_dough": "Bread Dough",
   "item.mineanddine.bun_dough": "Bun Dough",
   "item.mineanddine.bun": "Bun",
+  "item.mineanddine.tortilla_dough": "Tortilla Dough",
+  "item.mineanddine.raw_tortilla": "Raw Tortilla",
+  "item.mineanddine.tortilla": "Tortilla",
 
   "item.mineanddine.cookie_dough": "Cookie Dough",
 
@@ -68,6 +71,7 @@
   "item.mineanddine.cream": "Heavy Cream",
 
   "item.mineanddine.knife": "Knife",
+  "item.mineanddine.rolling_pin": "Rolling Pin",
 
   "itemgroup.mineanddine.mine_and_dine_seeds": "Mine and Dine Seeds",
   "itemgroup.mineanddine.mine_and_dine_ingredients": "Mine and Dine Ingredients",

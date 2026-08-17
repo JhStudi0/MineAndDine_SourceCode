@@ -1,0 +1,10 @@
+{
+  "type": "mineanddine:corn_grinder",
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  },
+  "result": {
+    "count": 4,
+    "id": "mineanddine:rock"
+  }
+}

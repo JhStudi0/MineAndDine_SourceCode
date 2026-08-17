@@ -76,6 +76,9 @@ public class ModItemGroups {
                         entries.add(ModItems.BREAD_DOUGH);
                         entries.add(ModItems.BUN_DOUGH);
                         entries.add(ModItems.BUN);
+                        entries.add(ModItems.TORTILLA_DOUGH);
+                        entries.add(ModItems.RAW_TORTILLA);
+                        entries.add(ModItems.TORTILLA);
                         entries.add(ModItems.COOKIE_DOUGH);
 
                         entries.add(ModItems.CHICKEN_LEG);
@@ -120,6 +123,7 @@ public class ModItemGroups {
                         entries.add(ModItems.VEGETABLE_STOCK);
 
                         entries.add(ModItems.BUN);
+                        entries.add(ModItems.TORTILLA);
 
                     }).build());
 
@@ -141,8 +145,9 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.MIXER);
 
-                        entries.add(ModItems.KNIFE);
                         entries.add(ModBlocks.CUTTING_BOARD);
+                        entries.add(ModItems.KNIFE);
+                        entries.add(ModItems.ROLLING_PIN);
 
                         entries.add(ModBlocks.STOVE);
                         entries.add(ModBlocks.COUNTER);

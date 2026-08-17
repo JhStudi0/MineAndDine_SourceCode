@@ -1,0 +1,15 @@
+{
+  "type": "mineanddine:mixer",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "mineanddine:flour"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:tortilla_dough"
+  }
+}
