@@ -1,0 +1,16 @@
+{
+  "type": "mineanddine:mixer",
+  "cook_time": 500,
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "mineanddine:butter"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:cream"
+  }
+}

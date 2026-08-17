@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:cutting_board",
+  "ingredient": {
+    "item": "mineanddine:bread_dough"
+  },
+  "result": {
+    "count": 4,
+    "id": "mineanddine:bun_dough"
+  },
+  "tool": {
+    "item": "mineanddine:knife"
+  }
+}

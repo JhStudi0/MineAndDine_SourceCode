@@ -1,11 +1,11 @@
-// 1.21.1	2026-08-15T18:24:53.2808683	Mine and Dine/Block Loot Tables
+// 1.21.1	2026-08-17T01:34:52.3768254	Mine and Dine/Block Loot Tables
 77a97555089f074f6a79022fe9b162cf271c7733 data\mineanddine\loot_table\blocks\counter.json
 82a7c8e5b0df754afdac7949a3dc455dbe2e108d data\mineanddine\loot_table\blocks\tomato_crop.json
 1d1cad367f284387d73e231a5ce6834047854d7e data\mineanddine\loot_table\blocks\cutting_board.json
 27139d974b1b53d533dd6843968869c54d10278b data\mineanddine\loot_table\blocks\corn_grinder.json
 c6027919c0459336f9da8f349220f0ab65ef6250 data\mineanddine\loot_table\blocks\corn_crop.json
-58618ed2cc235b30bf7c9dabf6098a2d0ee6302d data\mineanddine\loot_table\blocks\pan.json
 07bea2baab473c74388541a81ff2593664c7c479 data\mineanddine\loot_table\blocks\plate.json
+58618ed2cc235b30bf7c9dabf6098a2d0ee6302d data\mineanddine\loot_table\blocks\pan.json
 1878f2c9abc2dc098ff382546c37a61a92d4077a data\mineanddine\loot_table\blocks\yeast_jar.json
 bd51e7eeef4c53807d360ba5a0004d729680b834 data\mineanddine\loot_table\blocks\rice_crop.json
 c8a81d1fe3f5d4b88c45daee4731b30854b3d8eb data\mineanddine\loot_table\blocks\vanilla_bean_crop.json

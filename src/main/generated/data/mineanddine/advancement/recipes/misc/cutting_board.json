@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has Wooden Slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:wooden_slabs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mineanddine:cutting_board"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has Wooden Slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mineanddine:cutting_board"
+    ]
+  }
+}

@@ -7,6 +7,7 @@ import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.block.custom.CropBlocks.*;
 import net.jhstudios.mineanddine.item.ModItems;
 import net.minecraft.data.client.*;
+import org.spongepowered.asm.util.asm.MarkerNode;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -66,5 +67,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GROUND_SUNFLOWER_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.SUNFLOWER_OIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.KNIFE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BUN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BUN_DOUGH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKIE_DOUGH, Models.GENERATED);
     }
 }

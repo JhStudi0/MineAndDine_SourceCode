@@ -1,0 +1,27 @@
+{
+  "type": "mineanddine:mixer",
+  "ingredients": [
+    {
+      "item": "mineanddine:butter"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "mineanddine:flour"
+    },
+    {
+      "item": "mineanddine:salt"
+    },
+    {
+      "item": "mineanddine:dark_chocolate"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:cookie_dough"
+  }
+}

@@ -30,14 +30,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
-        List<ItemConvertible> CORN_SMELTABLES = List.of(ModItems.CORN_SEEDS);
-        offerSmelting(exporter, CORN_SMELTABLES, RecipeCategory.FOOD, ModItems.POPCORN, 0.25f, 100, "corn");
+        List<ItemConvertible> POPCORN_SMELTABLES = List.of(ModItems.CORN_SEEDS);
+        offerSmelting(exporter, POPCORN_SMELTABLES, RecipeCategory.FOOD, ModItems.POPCORN, 0.25f, 100, "popcorn");
 
-        List<ItemConvertible> BREAD_DOUGH = List.of(ModItems.BREAD_DOUGH);
-        offerSmelting(exporter, BREAD_DOUGH, RecipeCategory.FOOD, Items.BREAD, 0.25f, 400, "bread_dough");
+        List<ItemConvertible> BREAD_DOUGH_SMELTABLES = List.of(ModItems.BREAD_DOUGH);
+        offerSmelting(exporter, BREAD_DOUGH_SMELTABLES, RecipeCategory.FOOD, Items.BREAD, 0.25f, 400, "bread_dough");
+
+        List<ItemConvertible> BUN_DOUGH_SMELTABLES = List.of(ModItems.BUN_DOUGH);
+        offerSmelting(exporter, BUN_DOUGH_SMELTABLES, RecipeCategory.FOOD, ModItems.BUN, 0.25f, 400, "bun_dough");
 
         List<ItemConvertible> GRILLED_CORN_SMELTABLES = List.of(ModItems.CORN);
         offerSmelting(exporter, GRILLED_CORN_SMELTABLES, RecipeCategory.FOOD, ModItems.GRILLED_CORN, 0.25f, 300, "grilled_corn");
+
+        List<ItemConvertible> COOKIE_DOUGH_SMELTABLES = List.of(ModItems.COOKIE_DOUGH);
+        offerSmelting(exporter, COOKIE_DOUGH_SMELTABLES, RecipeCategory.FOOD, Items.COOKIE, 0.5f, 400, "cookie_dough");
 
 
 
@@ -123,25 +129,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.POPPY_SEEDS, 4)
-                .pattern("RR ")
-                .pattern("RR ")
-                .pattern("   ")
+                .pattern("RR")
+                .pattern("RR")
                 .input('R', Items.POPPY)
                 .criterion(hasItem(Items.POPPY), conditionsFromItem(Items.POPPY))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SUNFLOWER_SEEDS, 4)
-                .pattern("SS ")
-                .pattern("SS ")
-                .pattern("   ")
+                .pattern("SS")
+                .pattern("SS")
                 .input('S', Items.SUNFLOWER)
                 .criterion(hasItem(Items.SUNFLOWER), conditionsFromItem(Items.SUNFLOWER))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.COBBLESTONE)
-                .pattern("RR ")
-                .pattern("RR ")
-                .pattern("   ")
+                .pattern("RR")
+                .pattern("RR")
                 .input('R', ModItems.ROCK)
                 .criterion(hasItem(ModItems.ROCK), conditionsFromItem(ModItems.ROCK))
                 .offerTo(exporter);
@@ -170,7 +173,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CORN_GRINDER)
                 .pattern("SGS")
                 .pattern("SGS")
-                .pattern("   ")
                 .input('S', Blocks.STONE_BRICKS)
                 .input('G', Blocks.GRINDSTONE)
                 .criterion(hasItem(Items.GRINDSTONE), conditionsFromItem(Items.GRINDSTONE))
@@ -179,14 +181,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PLATE, 3)
                 .pattern("BBB")
                 .pattern(" W ")
-                .pattern("   ")
                 .input('B', Items.BRICK)
                 .input('W', Items.WHITE_DYE)
                 .criterion(hasItem(Items.BRICK), conditionsFromItem(Items.BRICK))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.COOKING_POT)
-                .pattern("   ")
                 .pattern("C C")
                 .pattern("CCC")
                 .input('C', Items.COPPER_INGOT)
@@ -194,7 +194,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PAN)
-                .pattern("   ")
                 .pattern("N N")
                 .pattern("CCC")
                 .input('C', Items.COPPER_INGOT)
@@ -213,14 +212,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COUNTER)
-                .pattern(" D ")
-                .pattern(" B ")
-                .pattern("   ")
+                .pattern("D")
+                .pattern("B")
                 .input('D', Blocks.POLISHED_DEEPSLATE_SLAB)
                 .input('B', Blocks.BRICKS)
                 .criterion(hasItem(Blocks.BRICKS), conditionsFromItem(Blocks.BRICKS))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CUTTING_BOARD)
+                .pattern("SS")
+                .input('S', ItemTags.WOODEN_SLABS)
+                .criterion("has Wooden Slab", conditionsFromTag(ItemTags.WOODEN_SLABS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.KNIFE)
+                .pattern("I")
+                .pattern("S")
+                .input('I', Items.IRON_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter);
 
 
 
@@ -321,10 +332,30 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.SALT)
                 .offerTo(exporter);
 
+        MixerRecipeJsonBuilder.create(ModItems.COOKIE_DOUGH, 200)
+                .input(ModItems.BUTTER)
+                .input(Items.SUGAR)
+                .input(Items.EGG, 1)
+                .input(ModItems.FLOUR)
+                .input(ModItems.SALT)
+                .input(ModItems.DARK_CHOCOLATE)
+                .offerTo(exporter);
+
+        MixerRecipeJsonBuilder.create(ModItems.CREAM, 500)
+                .input(Items.MILK_BUCKET)
+                .input(ModItems.BUTTER)
+                .offerTo(exporter);
+
+
 
         CuttingBoardRecipeJsonBuilder.create(Items.CHICKEN, ModItems.CHICKEN_LEG)
                 .tool(ModItems.KNIFE)
                 .outputCount(2)
+                .offerTo(exporter);
+
+        CuttingBoardRecipeJsonBuilder.create(ModItems.BREAD_DOUGH, ModItems.BUN_DOUGH)
+                .tool(ModItems.KNIFE)
+                .outputCount(4)
                 .offerTo(exporter);
     }
 

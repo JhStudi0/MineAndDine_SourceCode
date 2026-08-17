@@ -1,13 +1,13 @@
 {
   "type": "minecraft:smelting",
   "category": "food",
-  "cookingtime": 100,
+  "cookingtime": 400,
   "experience": 0.25,
-  "group": "popcorn",
+  "group": "bun_dough",
   "ingredient": {
-    "item": "mineanddine:corn_seeds"
+    "item": "mineanddine:bun_dough"
   },
   "result": {
-    "id": "mineanddine:popcorn"
+    "id": "mineanddine:bun"
   }
 }

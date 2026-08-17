@@ -3,15 +3,14 @@
   "category": "misc",
   "key": {
     "S": {
-      "item": "minecraft:sunflower"
+      "tag": "minecraft:wooden_slabs"
     }
   },
   "pattern": [
-    "SS",
     "SS"
   ],
   "result": {
-    "count": 4,
-    "id": "mineanddine:sunflower_seeds"
+    "count": 1,
+    "id": "mineanddine:cutting_board"
   }
 }

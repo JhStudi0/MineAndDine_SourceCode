@@ -74,6 +74,9 @@ public class ModItemGroups {
                         entries.add(ModItems.YEAST_JAR);
                         entries.add(ModItems.FERMENTED_YEAST_JAR);
                         entries.add(ModItems.BREAD_DOUGH);
+                        entries.add(ModItems.BUN_DOUGH);
+                        entries.add(ModItems.BUN);
+                        entries.add(ModItems.COOKIE_DOUGH);
 
                         entries.add(ModItems.CHICKEN_LEG);
 
@@ -115,6 +118,8 @@ public class ModItemGroups {
                         entries.add(ModItems.WHITE_CHOCOLATE_APPLE);
 
                         entries.add(ModItems.VEGETABLE_STOCK);
+
+                        entries.add(ModItems.BUN);
 
                     }).build());
 

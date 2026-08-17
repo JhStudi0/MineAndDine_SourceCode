@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cookie_dough": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mineanddine:cookie_dough"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mineanddine:cookie_from_smelting_cookie_dough"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cookie_dough"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mineanddine:cookie_from_smelting_cookie_dough"
+    ]
+  }
+}

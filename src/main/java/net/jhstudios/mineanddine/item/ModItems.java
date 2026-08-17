@@ -120,6 +120,12 @@ public class ModItems {
     public static final Item BREAD_DOUGH = registerItem("bread_dough", new JarFoodItem(new Item.Settings()
             .food(ModFoodComponents.BREAD_DOUGH)));
 
+    public static final Item BUN_DOUGH = registerItem("bun_dough", new Item(new Item.Settings()
+            .food(ModFoodComponents.BREAD_DOUGH)));
+
+    public static final Item COOKIE_DOUGH = registerItem("cookie_dough", new Item(new Item.Settings()
+            .food(ModFoodComponents.COOKIE_DOUGH)));
+
     public static final Item SUSHI_COD = registerItem("sushi_cod", new Item(new Item.Settings()
             .food(ModFoodComponents.SUSHI)));
 
@@ -150,6 +156,8 @@ public class ModItems {
     public static final Item GARLIC = registerItem("garlic", new Item(new Item.Settings()
             .food(ModFoodComponents.GARLIC)));
 
+    public static final Item BUN = registerItem("bun", new Item(new Item.Settings()
+            .food(FoodComponents.BREAD)));
 
     public static final Item KNIFE = registerItem("knife", new KnifeItem(new Item.Settings()
             .maxCount(1)

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 400,
+  "experience": 0.5,
+  "group": "cookie_dough",
+  "ingredient": {
+    "item": "mineanddine:cookie_dough"
+  },
+  "result": {
+    "id": "minecraft:cookie"
+  }
+}

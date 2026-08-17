@@ -11,8 +11,7 @@
   },
   "pattern": [
     "BBB",
-    " W ",
-    "   "
+    " W "
   ],
   "result": {
     "count": 3,

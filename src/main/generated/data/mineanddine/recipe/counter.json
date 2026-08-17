@@ -10,9 +10,8 @@
     }
   },
   "pattern": [
-    " D ",
-    " B ",
-    "   "
+    "D",
+    "B"
   ],
   "result": {
     "count": 1,
