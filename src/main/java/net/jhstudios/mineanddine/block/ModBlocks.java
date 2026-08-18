@@ -9,7 +9,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.CakeBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.client.particle.BlockLeakParticle;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -76,7 +75,7 @@ public class ModBlocks {
 
 
     public static final Block YEAST_JAR = registerBlockWithoutBlockItem("yeast_jar",
-            new YeastJarBlock(AbstractBlock.Settings.create()
+            new JarBlock(AbstractBlock.Settings.create()
                     .strength(0.3f)
                     .ticksRandomly()
                     .sounds(BlockSoundGroup.GLASS)

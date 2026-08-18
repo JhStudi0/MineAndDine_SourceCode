@@ -49,6 +49,17 @@
 
   "item.mineanddine.carrot_soup": "Carrot Soup",
 
+  "item.mineanddine.pie_dough": "Pie Dough",
+  "item.mineanddine.pie_base": "Pie Base",
+
+  "item.mineanddine.powdered_sugar": "Powdered Sugar",
+
+  "item.mineanddine.cinnamon_powder": "Cinnamon",
+
+  "item.mineanddine.pumpkin_slice": "Pumpkin Slice",
+  "item.mineanddine.grilled_pumpkin_slice": "Grilled Pumpkin Slice",
+
+
   "item.mineanddine.rock": "Rock",
 
   "item.mineanddine.jar": "Jar",
@@ -58,6 +69,7 @@
   "item.mineanddine.salt": "Salt",
   "item.mineanddine.flour": "Flour",
   "item.mineanddine.bread_dough": "Bread Dough",
+  "item.mineanddine.bread_slice": "Bread Slice",
   "item.mineanddine.bun_dough": "Bun Dough",
   "item.mineanddine.bun": "Bun",
   "item.mineanddine.tortilla_dough": "Tortilla Dough",

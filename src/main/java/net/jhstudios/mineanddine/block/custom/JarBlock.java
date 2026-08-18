@@ -10,14 +10,14 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 
-public class YeastJarBlock extends Block {
+public class JarBlock extends Block {
 
-    public static final MapCodec<YeastJarBlock> CODEC = createCodec(YeastJarBlock::new);
+    public static final MapCodec<JarBlock> CODEC = createCodec(JarBlock::new);
 
     public static final IntProperty AGE = Properties.AGE_3;
     public static final int MAX_AGE = 3;
 
-    public YeastJarBlock(Settings settings) {
+    public JarBlock(Settings settings) {
         super(settings);
     }
 

@@ -62,22 +62,22 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         this.addDrop(ModBlocks.YEAST_JAR, LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(ModItems.YEAST_JAR))));
         BlockStatePropertyLootCondition.Builder fermented = BlockStatePropertyLootCondition.builder(ModBlocks.YEAST_JAR).properties(StatePredicate.Builder.create()
-                .exactMatch(YeastJarBlock.AGE, YeastJarBlock.MAX_AGE));
+                .exactMatch(JarBlock.AGE, JarBlock.MAX_AGE));
 
         BlockStatePropertyLootCondition.Builder age0 =
                 BlockStatePropertyLootCondition.builder(ModBlocks.YEAST_JAR)
                         .properties(StatePredicate.Builder.create()
-                                .exactMatch(YeastJarBlock.AGE, 0));
+                                .exactMatch(JarBlock.AGE, 0));
 
         BlockStatePropertyLootCondition.Builder age1 =
                 BlockStatePropertyLootCondition.builder(ModBlocks.YEAST_JAR)
                         .properties(StatePredicate.Builder.create()
-                                .exactMatch(YeastJarBlock.AGE, 1));
+                                .exactMatch(JarBlock.AGE, 1));
 
         BlockStatePropertyLootCondition.Builder age2 =
                 BlockStatePropertyLootCondition.builder(ModBlocks.YEAST_JAR)
                         .properties(StatePredicate.Builder.create()
-                                .exactMatch(YeastJarBlock.AGE, 2));
+                                .exactMatch(JarBlock.AGE, 2));
         this.addDrop(ModBlocks.YEAST_JAR, LootTable.builder()
                 .pool(LootPool.builder().with(ItemEntry.builder(ModItems.YEAST_JAR).conditionally(age0)))
                 .pool(LootPool.builder().with(ItemEntry.builder(ModItems.YEAST_JAR).conditionally(age1)))

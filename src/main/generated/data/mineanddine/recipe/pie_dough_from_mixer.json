@@ -1,0 +1,24 @@
+{
+  "type": "mineanddine:mixer",
+  "ingredients": [
+    {
+      "item": "mineanddine:flour"
+    },
+    {
+      "item": "mineanddine:salt"
+    },
+    {
+      "item": "mineanddine:powdered_sugar"
+    },
+    {
+      "item": "mineanddine:butter"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:pie_dough"
+  }
+}

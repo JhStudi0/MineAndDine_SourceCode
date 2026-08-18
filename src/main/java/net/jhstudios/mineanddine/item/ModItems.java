@@ -14,6 +14,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import java.security.PublicKey;
+
 public class ModItems {
 
     private static Item registerItem(String name, Item item) {
@@ -117,10 +119,21 @@ public class ModItems {
     public static final Item BREAD_DOUGH = registerItem("bread_dough", new JarFoodItem(new Item.Settings()
             .food(ModFoodComponents.BREAD_DOUGH)));
 
+    public static final Item BREAD_SLICE = registerItem("bread_slice", new Item(new Item.Settings()
+            .food(ModFoodComponents.TORTILLA)));
+
     public static final Item BUN_DOUGH = registerItem("bun_dough", new Item(new Item.Settings()
             .food(ModFoodComponents.BREAD_DOUGH)));
 
     public static final Item COOKIE_DOUGH = registerItem("cookie_dough", new Item(new Item.Settings()
+            .food(ModFoodComponents.COOKIE_DOUGH)));
+
+    public static final Item PIE_DOUGH = registerItem("pie_dough", new Item(new Item.Settings()
+            .food(ModFoodComponents.COOKIE_DOUGH)));
+
+    public static final Item POWDERED_SUGAR = registerItem("powdered_sugar", new Item(new Item.Settings()));
+
+    public static final Item PIE_BASE = registerItem("pie_base", new Item(new Item.Settings()
             .food(ModFoodComponents.COOKIE_DOUGH)));
 
     public static final Item SUSHI_COD = registerItem("sushi_cod", new Item(new Item.Settings()
@@ -164,6 +177,16 @@ public class ModItems {
 
     public static final Item TORTILLA = registerItem("tortilla", new Item(new Item.Settings()
             .food(ModFoodComponents.TORTILLA)));
+
+    public static final Item PUMPKIN_SLICE = registerItem("pumpkin_slice", new Item(new Item.Settings()
+            .food(FoodComponents.MELON_SLICE)));
+
+    public static final Item GRILLED_PUMPKIN_SLICE = registerItem("grilled_pumpkin_slice", new Item(new Item.Settings()
+            .food(FoodComponents.MELON_SLICE)));
+
+    public static final Item CINNAMON_POWDER = registerItem("cinnamon_powder", new Item(new Item.Settings()));
+
+
 
     public static final Item KNIFE = registerItem("knife", new KnifeItem(new Item.Settings()
             .maxCount(1)

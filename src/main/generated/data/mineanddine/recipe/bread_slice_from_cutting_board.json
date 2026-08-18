@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:cutting_board",
+  "ingredient": {
+    "item": "minecraft:bread"
+  },
+  "result": {
+    "count": 4,
+    "id": "mineanddine:bread_slice"
+  },
+  "tool": {
+    "item": "mineanddine:knife"
+  }
+}

@@ -56,6 +56,7 @@
   "item.mineanddine.salt": "Salz",
   "item.mineanddine.flour": "Mehl",
   "item.mineanddine.bread_dough": "Brotteig",
+  "item.mineanddine.bread_slice": "Brotscheibe",
   "item.mineanddine.bun_dough": "Brötchenteig",
   "item.mineanddine.bun": "Brötchen",
   "item.mineanddine.tortilla_dough": "Tortillateig",
@@ -69,6 +70,16 @@
   "item.mineanddine.cream": "Sahne",
 
   "item.mineanddine.carrot_soup": "Karottensuppe",
+
+  "item.mineanddine.pie_dough": "Pastetenteig",
+  "item.mineanddine.pie_base": "Pastenboden",
+
+  "item.mineanddine.powdered_sugar": "Puderzucker",
+
+  "item.mineanddine.cinnamon_powder": "Zimt",
+
+  "item.mineanddine.pumpkin_slice": "Kürbisscheibe",
+  "item.mineanddine.grilled_pumpkin_slice": "gegrillte Kürbisscheibe",
 
   "item.mineanddine.knife": "Messer",
   "item.mineanddine.rolling_pin": "Nudelholz",

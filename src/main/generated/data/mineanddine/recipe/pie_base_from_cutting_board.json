@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:cutting_board",
+  "ingredient": {
+    "item": "mineanddine:pie_dough"
+  },
+  "result": {
+    "count": 1,
+    "id": "mineanddine:pie_base"
+  },
+  "tool": {
+    "item": "mineanddine:rolling_pin"
+  }
+}

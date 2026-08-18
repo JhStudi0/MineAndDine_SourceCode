@@ -58,6 +58,9 @@ public class ModItemGroups {
 
                         entries.add(ModItems.GARLIC);
 
+                        entries.add(ModItems.PUMPKIN_SLICE);
+                        entries.add(ModItems.GRILLED_PUMPKIN_SLICE);
+
                         entries.add(ModItems.VEGETABLE_STOCK);
 
                         entries.add(ModItems.MILK_CHOCOLATE);
@@ -68,18 +71,22 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SALT);
 
+                        entries.add(ModItems.POWDERED_SUGAR);
                         entries.add(ModItems.CARAMEL);
 
                         entries.add(ModItems.FLOUR);
                         entries.add(ModItems.YEAST_JAR);
                         entries.add(ModItems.FERMENTED_YEAST_JAR);
                         entries.add(ModItems.BREAD_DOUGH);
+                        entries.add(ModItems.BREAD_SLICE);
                         entries.add(ModItems.BUN_DOUGH);
                         entries.add(ModItems.BUN);
                         entries.add(ModItems.TORTILLA_DOUGH);
                         entries.add(ModItems.RAW_TORTILLA);
                         entries.add(ModItems.TORTILLA);
                         entries.add(ModItems.COOKIE_DOUGH);
+                        entries.add(ModItems.PIE_DOUGH);
+                        entries.add(ModItems.PIE_BASE);
 
                         entries.add(ModItems.CHICKEN_LEG);
 
@@ -90,6 +97,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SUNFLOWER_SEEDS);
                         entries.add(ModItems.GROUND_SUNFLOWER_SEEDS);
                         entries.add(ModItems.SUNFLOWER_OIL);
+
+                        entries.add(ModItems.CINNAMON_POWDER);
 
                     }).build());
 
