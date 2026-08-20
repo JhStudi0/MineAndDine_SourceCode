@@ -15,6 +15,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import java.security.PublicKey;
+import java.security.spec.DSAPublicKeySpec;
 
 public class ModItems {
 
@@ -184,8 +185,21 @@ public class ModItems {
     public static final Item GRILLED_PUMPKIN_SLICE = registerItem("grilled_pumpkin_slice", new Item(new Item.Settings()
             .food(FoodComponents.MELON_SLICE)));
 
+    public static final Item RAW_PUMPKIN_PIE = registerItem("raw_pumpkin_pie", new Item(new Item.Settings()
+            .food(ModFoodComponents.COOKIE_DOUGH)));
+
     public static final Item CINNAMON_POWDER = registerItem("cinnamon_powder", new Item(new Item.Settings()));
 
+    public static final Item CINNAMON_STICK = registerItem("cinnamon_stick", new Item(new Item.Settings()));
+
+    public static final Item APPLE_CHUNKS = registerItem("apple_chunks", new Item(new Item.Settings()
+            .food(FoodComponents.APPLE)));
+
+    public static final Item RAW_APPLE_PIE = registerItem("raw_apple_pie", new Item(new Item.Settings()
+            .food(ModFoodComponents.COOKIE_DOUGH)));
+
+    public static final Item APPLE_PIE = registerItem("apple_pie", new Item(new Item.Settings()
+            .food(FoodComponents.PUMPKIN_PIE)));
 
 
     public static final Item KNIFE = registerItem("knife", new KnifeItem(new Item.Settings()

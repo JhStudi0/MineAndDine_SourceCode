@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_apple_pie": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mineanddine:raw_apple_pie"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mineanddine:apple_pie_from_smelting_raw_apple_pie"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_apple_pie"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mineanddine:apple_pie_from_smelting_raw_apple_pie"
+    ]
+  }
+}

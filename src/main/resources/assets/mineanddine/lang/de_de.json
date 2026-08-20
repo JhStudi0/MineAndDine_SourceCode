@@ -77,9 +77,15 @@
   "item.mineanddine.powdered_sugar": "Puderzucker",
 
   "item.mineanddine.cinnamon_powder": "Zimt",
+  "item.mineanddine.cinnamon_stick": "Zimtstange",
+
+  "item.mineanddine.apple_chunks": "Apfelstücke",
+  "item.mineanddine.raw_apple_pie": "Ungebackener Apfelkuchen",
+  "item.mineanddine.apple_pie": "Apfelkuchen",
 
   "item.mineanddine.pumpkin_slice": "Kürbisscheibe",
   "item.mineanddine.grilled_pumpkin_slice": "gegrillte Kürbisscheibe",
+  "item.mineanddine.raw_pumpkin_pie": "Ungebackener Kürbiskuchen",
 
   "item.mineanddine.knife": "Messer",
   "item.mineanddine.rolling_pin": "Nudelholz",

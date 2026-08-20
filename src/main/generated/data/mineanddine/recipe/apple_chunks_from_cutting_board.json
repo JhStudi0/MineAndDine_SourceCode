@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:cutting_board",
+  "ingredient": {
+    "item": "minecraft:apple"
+  },
+  "result": {
+    "count": 1,
+    "id": "mineanddine:apple_chunks"
+  },
+  "tool": {
+    "item": "mineanddine:knife"
+  }
+}

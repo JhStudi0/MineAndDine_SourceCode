@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 300,
+  "experience": 0.25,
+  "group": "grilled_pumpkin_slice",
+  "ingredient": {
+    "item": "mineanddine:pumpkin_slice"
+  },
+  "result": {
+    "id": "mineanddine:grilled_pumpkin_slice"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "mineanddine:corn_grinder",
+  "ingredient": {
+    "item": "mineanddine:cinnamon_stick"
+  },
+  "result": {
+    "count": 1,
+    "id": "mineanddine:cinnamon_powder"
+  }
+}

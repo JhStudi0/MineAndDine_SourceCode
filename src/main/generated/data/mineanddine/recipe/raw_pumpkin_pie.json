@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mineanddine:pie_base"
+    },
+    {
+      "item": "mineanddine:grilled_pumpkin_slice"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "mineanddine:cinnamon_powder"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:raw_pumpkin_pie"
+  }
+}

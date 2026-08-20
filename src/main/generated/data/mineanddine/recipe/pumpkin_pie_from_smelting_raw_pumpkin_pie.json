@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 500,
+  "experience": 0.25,
+  "group": "pumpkin_pie",
+  "ingredient": {
+    "item": "mineanddine:raw_pumpkin_pie"
+  },
+  "result": {
+    "id": "minecraft:pumpkin_pie"
+  }
+}

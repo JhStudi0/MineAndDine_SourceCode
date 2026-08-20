@@ -7,6 +7,7 @@ import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.*;
 import net.jhstudios.mineanddine.item.ModItems;
 import net.minecraft.block.Blocks;
+import net.minecraft.command.argument.packrat.Cut;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -48,6 +49,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         List<ItemConvertible> PUMPKIN_SLICE_SMELTABLES = List.of(ModItems.PUMPKIN_SLICE);
         offerSmelting(exporter, PUMPKIN_SLICE_SMELTABLES, RecipeCategory.FOOD, ModItems.GRILLED_PUMPKIN_SLICE, 0.25f, 300, "grilled_pumpkin_slice");
+
+        List<ItemConvertible> PUMPKIN_PIE_SMELTABLES = List.of(ModItems.RAW_PUMPKIN_PIE);
+        offerSmelting(exporter, PUMPKIN_PIE_SMELTABLES, RecipeCategory.FOOD, Items.PUMPKIN_PIE, 0.25f, 500, "pumpkin_pie");
+
+        List<ItemConvertible> APPLE_PIE_SMELTABLES = List.of(ModItems.RAW_APPLE_PIE);
+        offerSmelting(exporter, APPLE_PIE_SMELTABLES, RecipeCategory.FOOD, ModItems.APPLE_PIE, 0.25f, 500, "apple_pie");
+
 
 
 
@@ -123,12 +131,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.GROUND_SUNFLOWER_SEEDS), conditionsFromItem(ModItems.GROUND_SUNFLOWER_SEEDS))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, Items.PUMPKIN_PIE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.RAW_PUMPKIN_PIE)
                 .input(ModItems.PIE_BASE)
                 .input(ModItems.GRILLED_PUMPKIN_SLICE)
                 .input(Items.EGG)
                 .input(ModItems.CINNAMON_POWDER)
                 .criterion(hasItem(Items.PUMPKIN), conditionsFromItem(Items.PUMPKIN))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.RAW_APPLE_PIE)
+                .input(ModItems.APPLE_CHUNKS, 2)
+                .input(ModItems.PIE_BASE)
+                .input(ModItems.CINNAMON_POWDER)
+                .input(Items.SUGAR)
+                .criterion(hasItem(ModItems.PIE_BASE), conditionsFromItem(ModItems.PIE_BASE))
                 .offerTo(exporter);
 
 
@@ -257,6 +273,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         CornGrinderRecipeJsonBuilder.create(Items.COBBLESTONE, ModItems.ROCK, 4).offerTo(exporter);
 
         CornGrinderRecipeJsonBuilder.create(Items.SUGAR, ModItems.POWDERED_SUGAR).offerTo(exporter);
+
+        CornGrinderRecipeJsonBuilder.create(ModItems.CINNAMON_STICK, ModItems.CINNAMON_POWDER).offerTo(exporter);
 
 
 
@@ -408,6 +426,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         CuttingBoardRecipeJsonBuilder.create(Items.PUMPKIN, ModItems.PUMPKIN_SLICE)
                 .tool(ModItems.KNIFE)
                 .outputCount(4)
+                .offerTo(exporter);
+
+        CuttingBoardRecipeJsonBuilder.create(Items.JUNGLE_LOG, ModItems.CINNAMON_STICK)
+                .tool(ModItems.KNIFE)
+                .outputCount(4)
+                .offerTo(exporter);
+
+        CuttingBoardRecipeJsonBuilder.create(Items.APPLE, ModItems.APPLE_CHUNKS)
+                .tool(ModItems.KNIFE)
                 .offerTo(exporter);
 
     }

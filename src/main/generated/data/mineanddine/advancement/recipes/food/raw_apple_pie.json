@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pie_base": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mineanddine:pie_base"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mineanddine:raw_apple_pie"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pie_base"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mineanddine:raw_apple_pie"
+    ]
+  }
+}

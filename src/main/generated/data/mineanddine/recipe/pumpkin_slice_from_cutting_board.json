@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:cutting_board",
+  "ingredient": {
+    "item": "minecraft:pumpkin"
+  },
+  "result": {
+    "count": 4,
+    "id": "mineanddine:pumpkin_slice"
+  },
+  "tool": {
+    "item": "mineanddine:knife"
+  }
+}

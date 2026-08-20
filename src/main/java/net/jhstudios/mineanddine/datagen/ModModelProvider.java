@@ -80,5 +80,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PIE_BASE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PUMPKIN_SLICE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRILLED_PUMPKIN_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_PUMPKIN_PIE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CINNAMON_POWDER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CINNAMON_STICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.APPLE_CHUNKS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_APPLE_PIE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.APPLE_PIE, Models.GENERATED);
     }
 }

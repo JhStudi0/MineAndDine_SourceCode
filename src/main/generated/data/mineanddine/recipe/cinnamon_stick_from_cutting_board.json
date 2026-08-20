@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:cutting_board",
+  "ingredient": {
+    "item": "minecraft:jungle_log"
+  },
+  "result": {
+    "count": 4,
+    "id": "mineanddine:cinnamon_stick"
+  },
+  "tool": {
+    "item": "mineanddine:knife"
+  }
+}

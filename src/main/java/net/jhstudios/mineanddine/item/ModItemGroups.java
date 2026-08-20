@@ -61,6 +61,9 @@ public class ModItemGroups {
                         entries.add(ModItems.PUMPKIN_SLICE);
                         entries.add(ModItems.GRILLED_PUMPKIN_SLICE);
 
+                        entries.add(ModItems.APPLE_CHUNKS);
+
+
                         entries.add(ModItems.VEGETABLE_STOCK);
 
                         entries.add(ModItems.MILK_CHOCOLATE);
@@ -87,6 +90,8 @@ public class ModItemGroups {
                         entries.add(ModItems.COOKIE_DOUGH);
                         entries.add(ModItems.PIE_DOUGH);
                         entries.add(ModItems.PIE_BASE);
+                        entries.add(ModItems.RAW_PUMPKIN_PIE);
+                        entries.add(ModItems.RAW_APPLE_PIE);
 
                         entries.add(ModItems.CHICKEN_LEG);
 
@@ -98,6 +103,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GROUND_SUNFLOWER_SEEDS);
                         entries.add(ModItems.SUNFLOWER_OIL);
 
+                        entries.add(ModItems.CINNAMON_STICK);
                         entries.add(ModItems.CINNAMON_POWDER);
 
                     }).build());
@@ -122,6 +128,8 @@ public class ModItemGroups {
                         entries.add(ModItems.ONIGIRI);
 
                         entries.add(ModItems.HONEY_COOKIE);
+
+                        entries.add(ModItems.APPLE_PIE);
 
                         entries.add(ModItems.CHOCOLATE_CAKE);
 

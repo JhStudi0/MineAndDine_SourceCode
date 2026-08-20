@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 500,
+  "experience": 0.25,
+  "group": "apple_pie",
+  "ingredient": {
+    "item": "mineanddine:raw_apple_pie"
+  },
+  "result": {
+    "id": "mineanddine:apple_pie"
+  }
+}

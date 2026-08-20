@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mineanddine:apple_chunks"
+    },
+    {
+      "item": "mineanddine:apple_chunks"
+    },
+    {
+      "item": "mineanddine:pie_base"
+    },
+    {
+      "item": "mineanddine:cinnamon_powder"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:raw_apple_pie"
+  }
+}
