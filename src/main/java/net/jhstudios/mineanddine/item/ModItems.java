@@ -201,6 +201,27 @@ public class ModItems {
     public static final Item APPLE_PIE = registerItem("apple_pie", new Item(new Item.Settings()
             .food(FoodComponents.PUMPKIN_PIE)));
 
+    public static final Item APPLE_SAUCE = registerItem("apple_sauce", new JarFoodItem(new Item.Settings()
+            .food(FoodComponents.APPLE)));
+
+    public static final Item SQUID = registerItem("squid", new Item(new Item.Settings()
+            .food(FoodComponents.SALMON)));
+
+    public static final Item PIG_INTESTINE = registerItem("pig_intestine", new Item(new Item.Settings()
+            .food(FoodComponents.CHICKEN)));
+
+    public static final Item FRENCH_TOAST = registerItem("french_toast", new Item(new Item.Settings()
+            .food(FoodComponents.BREAD)));
+
+    public static final Item BOILED_EGG = registerItem("boiled_egg", new Item(new Item.Settings()
+            .food(ModFoodComponents.EGG)));
+
+    public static final Item FRIED_EGG = registerItem("fried_egg", new Item(new Item.Settings()
+            .food(ModFoodComponents.EGG)));
+
+    public static final Item SCRAMBLED_EGGS = registerItem("scrambled_eggs", new Item(new Item.Settings()
+            .food(ModFoodComponents.EGG)));
+
 
     public static final Item KNIFE = registerItem("knife", new KnifeItem(new Item.Settings()
             .maxCount(1)

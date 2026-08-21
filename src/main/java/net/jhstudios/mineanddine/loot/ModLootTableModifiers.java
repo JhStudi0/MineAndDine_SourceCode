@@ -9,6 +9,7 @@ import net.minecraft.loot.condition.InvertedLootCondition;
 import net.minecraft.loot.condition.MatchToolLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -28,7 +29,20 @@ public class ModLootTableModifiers {
                     Identifier.of("minecraft", "blocks/tall_grass")
             );
 
-    private record SeedEntry(Item item, int weight) {}
+    public static final RegistryKey<net.minecraft.loot.LootTable> SQUID =
+            RegistryKey.of(
+                    RegistryKeys.LOOT_TABLE,
+                    Identifier.of("minecraft", "entities/squid")
+            );
+
+    public static final RegistryKey<net.minecraft.loot.LootTable> PIG =
+            RegistryKey.of(
+                    RegistryKeys.LOOT_TABLE,
+                    Identifier.of("minecraft", "entities/pig")
+            );
+
+    private record SeedEntry(Item item, int weight) {
+    }
 
     private static final SeedEntry[] GRASS_SEEDS = {
             new SeedEntry(ModItems.TOMATO_SEEDS, 5),
@@ -45,23 +59,33 @@ public class ModLootTableModifiers {
             if (!source.isBuiltin()) {
                 return;
             }
-            if (!key.equals(SHORT_GRASS) && !key.equals(TALL_GRASS)) {
-                return;
+            if (key.equals(SHORT_GRASS) && key.equals(TALL_GRASS)) {
+
+                LootPool.Builder pool = LootPool.builder()
+                        .conditionally(RandomChanceLootCondition.builder(0.125f))
+                        .conditionally(InvertedLootCondition.builder(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(Items.SHEARS))));
+
+
+                for (SeedEntry seed : GRASS_SEEDS) {
+                    pool.with(ItemEntry.builder(seed.item()).weight(seed.weight()));
+                }
+
+                tableBuilder.pool(pool);
             }
 
-            LootPool.Builder pool = LootPool.builder()
-                    .conditionally(RandomChanceLootCondition.builder(0.125f))
-                    .conditionally(InvertedLootCondition.builder(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(Items.SHEARS))));
+            if (key.equals(SQUID)) {
+                LootPool.Builder pool = LootPool.builder()
+                        .with(ItemEntry.builder(ModItems.SQUID));
 
-
-            for (SeedEntry seed : GRASS_SEEDS) {
-                pool.with(
-                        ItemEntry.builder(seed.item())
-                                .weight(seed.weight())
-                );
+                tableBuilder.pool(pool);
             }
+            if (key.equals(PIG)){
+                LootPool.Builder pool = LootPool.builder()
+                        .conditionally(RandomChanceLootCondition.builder(0.25f))
+                        .with(ItemEntry.builder(ModItems.PIG_INTESTINE));
 
-            tableBuilder.pool(pool);
+                tableBuilder.pool(pool);
+            }
         });
     }
 }

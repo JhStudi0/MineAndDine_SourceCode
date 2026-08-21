@@ -1,0 +1,25 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "container": {
+    "item": "mineanddine:jar"
+  },
+  "cook_time": 600,
+  "ingredients": [
+    {
+      "item": "mineanddine:onion"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "mineanddine:salt"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:vegetable_stock"
+  }
+}

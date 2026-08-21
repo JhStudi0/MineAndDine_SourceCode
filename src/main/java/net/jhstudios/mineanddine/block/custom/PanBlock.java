@@ -32,6 +32,8 @@ public class PanBlock extends BlockWithEntity implements BlockEntityProvider {
 
     public PanBlock(Settings settings) {
         super(settings);
+
+        setDefaultState(getStateManager().getDefaultState().with(COOKING, false));
     }
 
     @Override

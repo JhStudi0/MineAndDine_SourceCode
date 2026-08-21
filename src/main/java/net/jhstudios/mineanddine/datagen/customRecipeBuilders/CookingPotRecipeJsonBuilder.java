@@ -11,20 +11,26 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 
+import java.util.Optional;
+
 public class CookingPotRecipeJsonBuilder {
     private final Item output;
-    private final Ingredient container;
+    private final Optional<Ingredient> container;
     private final DefaultedList<Ingredient> inputs = DefaultedList.of();
     private final int cook_time;
 
-    private CookingPotRecipeJsonBuilder(Ingredient container, Item output, int cook_time) {
+    private CookingPotRecipeJsonBuilder(Optional<Ingredient> container, Item output, int cook_time) {
         this.output = output;
         this.container = container;
         this.cook_time = cook_time;
     }
 
     public static CookingPotRecipeJsonBuilder create(Ingredient container, Item output, int cook_time) {
-        return new CookingPotRecipeJsonBuilder(container, output, cook_time);
+        return new CookingPotRecipeJsonBuilder(Optional.of(container), output, cook_time);
+    }
+
+    public static CookingPotRecipeJsonBuilder create(Item output, int cook_time) {
+        return new CookingPotRecipeJsonBuilder(Optional.empty(), output, cook_time);
     }
 
     public CookingPotRecipeJsonBuilder input(TagKey<Item> tag) {

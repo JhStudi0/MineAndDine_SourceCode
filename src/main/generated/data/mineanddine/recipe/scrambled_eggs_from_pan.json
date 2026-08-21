@@ -1,0 +1,15 @@
+{
+  "type": "mineanddine:pan",
+  "ingredients": [
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "mineanddine:butter"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:scrambled_eggs"
+  }
+}

@@ -22,6 +22,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
@@ -211,8 +212,10 @@ public class CookingPotBlockEntity extends BlockEntity implements ImplementedInv
         }
 
         ItemStack output = recipe.get().value().output();
+        Ingredient container = recipe.get().value().container().orElse(null);
+        boolean containerValid = (container == null || container.test(getStack(CONTAINER_SLOT)));
 
-        return recipe.get().value().container().test(getStack(CONTAINER_SLOT)) && canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        return containerValid && canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
 
     private Optional<RecipeEntry<CookingPotRecipe>> getCurrentRecipe() {

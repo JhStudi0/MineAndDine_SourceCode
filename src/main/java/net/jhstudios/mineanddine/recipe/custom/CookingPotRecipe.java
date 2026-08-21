@@ -18,8 +18,9 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
-public record CookingPotRecipe(DefaultedList<Ingredient> ingredients, Ingredient container, ItemStack output, int cookTime) implements Recipe<CookingPotRecipeInput> {
+public record CookingPotRecipe(DefaultedList<Ingredient> ingredients, Optional<Ingredient> container, ItemStack output, int cookTime) implements Recipe<CookingPotRecipeInput> {
 
 
     @Override
@@ -90,7 +91,7 @@ public record CookingPotRecipe(DefaultedList<Ingredient> ingredients, Ingredient
         public static final MapCodec<CookingPotRecipe> CODEC =
                 RecordCodecBuilder.mapCodec(instance -> instance.group(
                         Ingredient.DISALLOW_EMPTY_CODEC.listOf().fieldOf("ingredients").forGetter(CookingPotRecipe::ingredients),
-                        Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("container").forGetter(CookingPotRecipe::container),
+                        Ingredient.DISALLOW_EMPTY_CODEC.optionalFieldOf("container").forGetter(CookingPotRecipe::container),
                         ItemStack.VALIDATED_CODEC.fieldOf("result").forGetter(CookingPotRecipe::output),
                         com.mojang.serialization.Codec.INT.optionalFieldOf("cook_time", 200).forGetter(CookingPotRecipe::cookTime)
                 ).apply(instance, (ingredients, container, result, cookTime) -> new CookingPotRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), container, result, cookTime)));
@@ -100,7 +101,7 @@ public record CookingPotRecipe(DefaultedList<Ingredient> ingredients, Ingredient
         public static final PacketCodec<RegistryByteBuf, CookingPotRecipe> STREAM_CODEC = PacketCodec.tuple(
                 Ingredient.PACKET_CODEC.collect(PacketCodecs.toList()),
                 recipe -> new ArrayList<>(recipe.ingredients()),
-                Ingredient.PACKET_CODEC, CookingPotRecipe::container,
+                PacketCodecs.optional(Ingredient.PACKET_CODEC), CookingPotRecipe::container,
                 ItemStack.PACKET_CODEC, CookingPotRecipe::output,
                 PacketCodecs.INTEGER, CookingPotRecipe::cookTime,
                 ((ingredients,container, result, cookTime) -> new CookingPotRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), container, result, cookTime)));

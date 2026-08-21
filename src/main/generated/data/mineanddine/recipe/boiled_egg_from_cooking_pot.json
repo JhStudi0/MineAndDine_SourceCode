@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "cook_time": 250,
+  "ingredients": [
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:boiled_egg"
+  }
+}

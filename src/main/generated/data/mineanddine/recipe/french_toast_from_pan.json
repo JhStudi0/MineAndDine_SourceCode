@@ -1,0 +1,25 @@
+{
+  "type": "mineanddine:pan",
+  "cook_time": 300,
+  "ingredients": [
+    {
+      "item": "mineanddine:bread_slice"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "mineanddine:butter"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:french_toast"
+  }
+}

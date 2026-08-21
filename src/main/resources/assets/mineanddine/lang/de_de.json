@@ -80,12 +80,23 @@
   "item.mineanddine.cinnamon_stick": "Zimtstange",
 
   "item.mineanddine.apple_chunks": "Apfelstücke",
+  "item.mineanddine.apple_sauce": "Apfelmus",
   "item.mineanddine.raw_apple_pie": "Ungebackener Apfelkuchen",
   "item.mineanddine.apple_pie": "Apfelkuchen",
 
   "item.mineanddine.pumpkin_slice": "Kürbisscheibe",
   "item.mineanddine.grilled_pumpkin_slice": "gegrillte Kürbisscheibe",
   "item.mineanddine.raw_pumpkin_pie": "Ungebackener Kürbiskuchen",
+
+  "item.mineanddine.squid": "Tintenfisch",
+
+  "item.mineanddine.pig_intestine": "Schweinedarm",
+
+  "item.mineanddine.boiled_egg": "Hartgekochtes Ei",
+  "item.mineanddine.fried_egg": "Spiegelei",
+  "item.mineanddine.scrambled_eggs": "Rührei",
+
+  "item.mineanddine.french_toast": "French Toast",
 
   "item.mineanddine.knife": "Messer",
   "item.mineanddine.rolling_pin": "Nudelholz",

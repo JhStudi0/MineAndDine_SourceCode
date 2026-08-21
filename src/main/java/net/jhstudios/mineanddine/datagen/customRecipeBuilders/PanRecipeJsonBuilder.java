@@ -61,6 +61,7 @@ public class PanRecipeJsonBuilder {
         return this;
     }
 
+    /*
     public PanRecipeJsonBuilder container(ItemConvertible item) {
         this.container = Optional.of(Ingredient.ofItems(item));
         return this;
@@ -69,7 +70,7 @@ public class PanRecipeJsonBuilder {
     public PanRecipeJsonBuilder container(Ingredient ingredient) {
         this.container = Optional.of(ingredient);
         return this;
-    }
+    }*/
 
     public void offerTo(RecipeExporter exporter) {
         Identifier outputId = Registries.ITEM.getId(output);

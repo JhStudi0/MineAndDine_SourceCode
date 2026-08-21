@@ -1,0 +1,13 @@
+{
+  "type": "mineanddine:pan",
+  "cook_time": 150,
+  "ingredients": [
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:fried_egg"
+  }
+}

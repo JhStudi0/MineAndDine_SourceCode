@@ -7,6 +7,7 @@ import net.jhstudios.mineanddine.block.entity.ModBlockEntities;
 import net.jhstudios.mineanddine.recipe.custom.CookingPotRecipeInput;
 import net.jhstudios.mineanddine.recipe.ModRecipes;
 import net.jhstudios.mineanddine.recipe.custom.PanRecipe;
+import net.jhstudios.mineanddine.recipe.custom.PanRecipeInput;
 import net.jhstudios.mineanddine.screen.custom.PanScreenHandler;
 import net.jhstudios.mineanddine.util.ModTags;
 import net.minecraft.block.AbstractFurnaceBlock;
@@ -112,7 +113,7 @@ public class PanBlockEntity extends BlockEntity implements ImplementedInventory,
     protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         Inventories.readNbt(nbt, inventory, registryLookup);
         progress = nbt.getInt("pan.progress");
-        maxProgress = nbt.getInt("pan-.max_progress");
+        maxProgress = nbt.getInt("pan.max_progress");
         super.readNbt(nbt, registryLookup);
     }
 
@@ -228,7 +229,7 @@ public class PanBlockEntity extends BlockEntity implements ImplementedInventory,
             inputs.set(i, inventory.get(i));
         }
 
-        CookingPotRecipeInput input = new CookingPotRecipeInput(inputs);
+        PanRecipeInput input = new PanRecipeInput(inputs);
 
         return world.getRecipeManager().getFirstMatch(ModRecipes.PAN_TYPE, input, world);
     }

@@ -69,4 +69,7 @@ public class ModFoodComponents {
 
     public static final FoodComponent GARLIC = new FoodComponent.Builder().nutrition(1).saturationModifier(0.1f)
             .build();
+
+    public static final FoodComponent EGG = new FoodComponent.Builder().nutrition(3).saturationModifier(0.3f)
+            .build();
 }

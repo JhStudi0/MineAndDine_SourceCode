@@ -1,0 +1,22 @@
+{
+  "type": "mineanddine:cooking_pot",
+  "container": {
+    "item": "mineanddine:jar"
+  },
+  "cook_time": 400,
+  "ingredients": [
+    {
+      "item": "mineanddine:apple_chunks"
+    },
+    {
+      "item": "mineanddine:apple_chunks"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mineanddine:apple_sauce"
+  }
+}

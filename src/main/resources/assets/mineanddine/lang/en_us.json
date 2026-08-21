@@ -58,6 +58,7 @@
   "item.mineanddine.cinnamon_stick": "Cinnamon Stick",
 
   "item.mineanddine.apple_chunks": "Apple Chunks",
+  "item.mineanddine.apple_sauce": "Apple Sauce",
   "item.mineanddine.raw_apple_pie": "Unbaked Apple Pie",
   "item.mineanddine.apple_pie": "Apple Pie",
 
@@ -86,6 +87,17 @@
   "item.mineanddine.chicken_leg": "Chicken Leg",
 
   "item.mineanddine.cream": "Heavy Cream",
+
+  "item.mineanddine.squid": "Squid",
+
+  "item.mineanddine.pig_intestine": "Pig Intestine",
+
+  "item.mineanddine.boiled_egg": "Boiled Egg",
+  "item.mineanddine.fried_egg": "Fried Egg",
+  "item.mineanddine.scrambled_eggs": "Scrambled Eggs",
+
+  "item.mineanddine.french_toast": "French Toast",
+
 
   "item.mineanddine.knife": "Knife",
   "item.mineanddine.rolling_pin": "Rolling Pin",

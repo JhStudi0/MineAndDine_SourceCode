@@ -32,6 +32,8 @@ public class CookingPotBlock extends BlockWithEntity implements BlockEntityProvi
 
     public CookingPotBlock(Settings settings) {
         super(settings);
+
+        setDefaultState(getStateManager().getDefaultState().with(COOKING, false));
     }
 
     @Override

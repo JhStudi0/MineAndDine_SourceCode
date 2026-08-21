@@ -7,6 +7,7 @@ import net.jhstudios.mineanddine.block.ModBlocks;
 import net.jhstudios.mineanddine.datagen.customRecipeBuilders.*;
 import net.jhstudios.mineanddine.item.ModItems;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.Waterloggable;
 import net.minecraft.command.argument.packrat.Cut;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -329,6 +330,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.VEGETABLE_STOCK)
                 .offerTo(exporter);
 
+        CookingPotRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.JAR), ModItems.APPLE_SAUCE, 400)
+                .input(ModItems.APPLE_CHUNKS, 2)
+                .input(Items.SUGAR)
+                .offerTo(exporter);
+
+        CookingPotRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.JAR), ModItems.VEGETABLE_STOCK, 600)
+                .input(ModItems.ONION)
+                .input(Items.CARROT)
+                .input(Items.WATER_BUCKET)
+                .input(ModItems.SALT)
+                .offerTo(exporter);
+
+        CookingPotRecipeJsonBuilder.create(ModItems.BOILED_EGG, 250)
+                .input(Items.EGG)
+                .offerTo(exporter);
+
+        CookingPotRecipeJsonBuilder.create(ModItems.SALT, 500)
+                .input(Items.WATER_BUCKET, 2)
+                .offerTo(exporter);
+
+
+
 
         PanRecipeJsonBuilder.create(Items.COOKED_BEEF, 300)
                 .input(Items.BEEF)
@@ -360,6 +383,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         PanRecipeJsonBuilder.create(ModItems.TORTILLA, 100)
                 .input(ModItems.RAW_TORTILLA)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(ModItems.FRIED_EGG, 150)
+                .input(Items.EGG)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(ModItems.SCRAMBLED_EGGS, 200)
+                .input(Items.EGG)
+                .input(ModItems.BUTTER)
+                .offerTo(exporter);
+
+        PanRecipeJsonBuilder.create(ModItems.FRENCH_TOAST, 300)
+                .input(ModItems.BREAD_SLICE)
+                .input(Items.EGG)
+                .input(Items.MILK_BUCKET)
+                .input(Items.SUGAR)
+                .input(ModItems.BUTTER)
                 .offerTo(exporter);
 
 

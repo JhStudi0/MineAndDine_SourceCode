@@ -20,9 +20,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
-public record PanRecipe(DefaultedList<Ingredient> ingredients, Optional<Ingredient> container, ItemStack output, int cookTime) implements Recipe<CookingPotRecipeInput> {
+public record PanRecipe(DefaultedList<Ingredient> ingredients, Optional<Ingredient> container, ItemStack output, int cookTime) implements Recipe<PanRecipeInput> {
     @Override
-    public boolean matches(CookingPotRecipeInput input, World world) {
+    public boolean matches(PanRecipeInput input, World world) {
         List<ItemStack> remaining = new ArrayList<>();
 
         for (int i = 0; i < input.getSize(); i++) {
@@ -59,7 +59,7 @@ public record PanRecipe(DefaultedList<Ingredient> ingredients, Optional<Ingredie
     }
 
     @Override
-    public ItemStack craft(CookingPotRecipeInput input, RegistryWrapper.WrapperLookup lookup) {
+    public ItemStack craft(PanRecipeInput input, RegistryWrapper.WrapperLookup lookup) {
         return output.copy();
     }
 
@@ -97,32 +97,13 @@ public record PanRecipe(DefaultedList<Ingredient> ingredients, Optional<Ingredie
 
         public static final PacketCodec<RegistryByteBuf, PanRecipe> STREAM_CODEC =
                 PacketCodec.tuple(
-                        // 1. Ingredients
                         Ingredient.PACKET_CODEC.collect(PacketCodecs.toList()),
                         recipe -> new ArrayList<>(recipe.ingredients()),
+                        PacketCodecs.optional(Ingredient.PACKET_CODEC), PanRecipe::container,
+                        ItemStack.PACKET_CODEC, PanRecipe::output,
+                        PacketCodecs.INTEGER, PanRecipe::cookTime,
 
-                        // 2. Container (optional Ingredient) - PASS THE OPTIONAL DIRECTLY!
-                        PacketCodecs.optional(Ingredient.PACKET_CODEC),
-                        PanRecipe::container,  // ✅ Returns Optional<Ingredient>
-
-                        // 3. Output
-                        ItemStack.PACKET_CODEC,
-                        PanRecipe::output,
-
-                        // 4. Cook Time
-                        PacketCodecs.INTEGER,
-                        PanRecipe::cookTime,
-
-                        // Decoder - container is already Optional
-                        ((List<Ingredient> ingredients, Optional<Ingredient> container, ItemStack result, Integer cookTime) ->
-                                new PanRecipe(
-                                        DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])),
-                                        container,  // ✅ Already Optional<Ingredient>
-                                        result,
-                                        cookTime
-                                )
-                        )
-                );
+                        ((List<Ingredient> ingredients, Optional<Ingredient> container, ItemStack result, Integer cookTime) -> new PanRecipe(DefaultedList.copyOf(Ingredient.EMPTY, ingredients.toArray(new Ingredient[0])), container, result, cookTime)));
 
         @Override
         public MapCodec<PanRecipe> codec() {
